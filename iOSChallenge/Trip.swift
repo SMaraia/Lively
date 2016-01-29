@@ -63,6 +63,10 @@ class TripHolder: NSObject, NSCoding {
         }
         
     }
+    
+    func addTrip(trip: Trip) {
+        trips.append(trip)
+    }
 }
 
 var trips = TripHolder()

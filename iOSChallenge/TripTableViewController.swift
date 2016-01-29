@@ -31,7 +31,7 @@ class TripTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,8 +42,7 @@ class TripTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("tripCell", forIndexPath: indexPath) as! TripTableViewCell
-        //let trip = trips[indexPath]
-        let trip = Trip(name: "TestTrip")
+        let trip = trips[indexPath.row]
         // Configure the cell...
         if trip.tripPhotos.count > 0 {
             cell.imageOne!.image = trip.tripPhotos[0]
@@ -61,6 +60,25 @@ class TripTableViewController: UITableViewController {
     }
 
 
+    @IBAction func AddTapped(sender: AnyObject) {
+        let alertView = UIAlertController(title: "Name of Trip", message: "", preferredStyle: .Alert)
+        alertView.addTextFieldWithConfigurationHandler { (textField: UITextField) -> Void in
+            textField.placeholder = "Vacation in Aruba"
+        }
+        let saveAction = UIAlertAction(title: "Done", style: .Default, handler: {alert -> Void in
+            let tripName = alertView.textFields![0].text
+            let newTrip = Trip(name: tripName!)
+            self.addTrip(newTrip)
+        })
+        alertView.addAction(saveAction)
+        self.presentViewController(alertView, animated: true, completion: nil)
+    }
+
+    func addTrip(newTrip: Trip) {
+        trips.addTrip(newTrip)
+        self.tableView.reloadData()
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
