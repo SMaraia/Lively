@@ -12,6 +12,8 @@ import UIKit
 class TripTableViewController: UITableViewController {
 
     
+    let SAVED_FILE_NAME = "Trips.archive"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +22,11 @@ class TripTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        if(fileExists(FilePathInDocumentsDirectory(SAVED_FILE_NAME))){
+            trips = NSKeyedUnarchiver.unarchiveObjectWithFile(FilePathInDocumentsDirectory(SAVED_FILE_NAME)) as! TripHolder
+        }
+        //sets the app up to save the favorites object when the app becomes inactive
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "saveData", name: UIApplicationWillResignActiveNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -129,6 +136,13 @@ class TripTableViewController: UITableViewController {
                 (segue.destinationViewController as! TripViewController).trip = tripToSend
             }
         }
+    }
+    
+    // MARK: - Saving Data -
+    func saveData(){
+        //saves favorites object, including array of favorite Games, to documents folder
+        let pathToFile = FilePathInDocumentsDirectory(SAVED_FILE_NAME)
+        var success = NSKeyedArchiver.archiveRootObject(trips, toFile: pathToFile)
     }
     
 
