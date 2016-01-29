@@ -16,24 +16,35 @@ class TripViewController: UIViewController {
     @IBOutlet weak var TripImageTwo: UIImageView!
     @IBOutlet weak var TripName: UILabel!
     
+    var detailItem: AnyObject? {
+        didSet{
+            self.configureView()
+        }
+    }
+    
     func configureView() {
-        if let tripUnwrap: Trip = self.trip {
-            TripName.text = tripUnwrap.name
-            if tripUnwrap.tripDescription != "" {
-                TextView.text = tripUnwrap.tripDescription
-            } else {
-                TextView.text = "Fill in your Thoughts Here!"
-            }
-            if tripUnwrap.tripPhotos.count > 0 {
-                TripImageOne.image = tripUnwrap.tripPhotos[0]
-            } else {
-                TripImageOne.tintColor = UIColor.blackColor()
-            }
-            
-            if tripUnwrap.tripPhotos.count > 1 {
-                TripImageTwo.image = tripUnwrap.tripPhotos[1]
-            } else {
-                TripImageTwo.tintColor = UIColor.blackColor()
+        if TextView != nil {
+            if let detail: Trip = self.detailItem as? Trip {
+                
+                TripName.text = detail.name
+                if detail.tripDescription != "" {
+                    TextView.text = detail.tripDescription
+                } else {
+                    TextView.text = "Fill in your Thoughts Here!"
+                }
+                if detail.tripPhotos.count > 0 {
+                    TripImageOne.image = detail.tripPhotos[0]
+                } else {
+                    TripImageOne.tintColor = UIColor.blackColor()
+                }
+                
+                if detail.tripPhotos.count > 1 {
+                    TripImageTwo.image = detail.tripPhotos[1]
+                } else {
+                    TripImageTwo.tintColor = UIColor.blackColor()
+                }
+                
+                trip = detail
             }
         }
     }

@@ -62,7 +62,7 @@
                                 <connections>
                                     <outlet property="imageOne" destination="sTk-IW-gxV" id="3Ja-un-GEj"/>
                                     <outlet property="imageTwo" destination="TJ3-xp-jJw" id="eRx-Wo-Fvs"/>
-                                    <segue destination="dea-T1-l8Z" kind="showDetail" id="r4s-Zh-io1"/>
+                                    <segue destination="dea-T1-l8Z" kind="showDetail" identifier="ShowDetail" id="r4s-Zh-io1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -133,7 +133,7 @@ class TripTableViewController: UITableViewController {
         if segue.identifier == "ShowDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let tripToSend = trips[indexPath.row] as Trip
-                (segue.destinationViewController as! TripViewController).trip = tripToSend
+                (segue.destinationViewController as! TripViewController).detailItem = tripToSend
             }
         }
     }
