@@ -8,53 +8,58 @@
 
 import UIKit
 
-class TripViewController: UIViewController {
-    var trip: Trip?
-    
+class TripViewController: UIViewController, UITextViewDelegate{
     @IBOutlet weak var TextView: UITextView!
     @IBOutlet weak var TripImageOne: UIImageView!
     @IBOutlet weak var TripImageTwo: UIImageView!
     @IBOutlet weak var TripName: UILabel!
     
-    var detailItem: AnyObject? {
+    var TripIndex: Int? {
         didSet{
             self.configureView()
         }
     }
     
+    @IBAction func exit(sender: AnyObject) {
+        self
+    }
     func configureView() {
         if TextView != nil {
-            if let detail: Trip = self.detailItem as? Trip {
-                
-                TripName.text = detail.name
-                if detail.tripDescription != "" {
-                    TextView.text = detail.tripDescription
+            if let index: Int = TripIndex {
+                TripName.text = trips[index].name
+                if trips[index].tripDescription != "" {
+                    TextView.text = trips[index].tripDescription
                 } else {
                     TextView.text = "Fill in your Thoughts Here!"
                 }
-                if detail.tripPhotos.count > 0 {
-                    TripImageOne.image = detail.tripPhotos[0]
+                if trips[index].tripPhotos.count > 0 {
+                    TripImageOne.image = trips[index].tripPhotos[0]
                 } else {
                     TripImageOne.tintColor = UIColor.blackColor()
                 }
                 
-                if detail.tripPhotos.count > 1 {
-                    TripImageTwo.image = detail.tripPhotos[1]
+                if trips[index].tripPhotos.count > 1 {
+                    TripImageTwo.image = trips[index].tripPhotos[1]
                 } else {
                     TripImageTwo.tintColor = UIColor.blackColor()
                 }
-                
-                trip = detail
+            }
             }
         }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        TextView.delegate = self
+
         self.configureView()
     }
     
+    func textViewDidChange(textView: UITextView) {
+        trips[TripIndex!].tripDescription = TextView.text
+    }
+    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

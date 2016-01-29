@@ -132,8 +132,7 @@ class TripTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "ShowDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let tripToSend = trips[indexPath.row] as Trip
-                (segue.destinationViewController as! TripViewController).detailItem = tripToSend
+                (segue.destinationViewController as! TripViewController).TripIndex = indexPath.row
             }
         }
     }
