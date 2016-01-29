@@ -85,10 +85,10 @@
 			children = (
 				C59B5D9B1C5B0697008CF5CA /* Model */,
 				C59B5D991C5B056C008CF5CA /* TripTableViewController.swift */,
+				C59B5D9E1C5B09E4008CF5CA /* TripTableViewCell.swift */,
 				C59B5DA01C5B0E1D008CF5CA /* ViewController.swift */,
 				C59B5D791C5AFA8D008CF5CA /* AppDelegate.swift */,
 				C59B5D7D1C5AFA8D008CF5CA /* Main.storyboard */,
-				C59B5D9E1C5B09E4008CF5CA /* TripTableViewCell.swift */,
 				C59B5D801C5AFA8D008CF5CA /* Assets.xcassets */,
 				C59B5DA41C5B12D7008CF5CA /* LaunchScreen.xib */,
 				C59B5D851C5AFA8D008CF5CA /* Info.plist */,
@@ -400,6 +400,7 @@
 				C59B5D951C5AFA8D008CF5CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C59B5D961C5AFA8D008CF5CA /* Build configuration list for PBXNativeTarget "iOSChallengeUITests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +409,7 @@
 				C59B5D981C5AFA8D008CF5CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
