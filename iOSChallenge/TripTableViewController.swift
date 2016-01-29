@@ -1,3 +1,4 @@
+
 //
 //  TripTableViewController.swift
 //  iOSChallenge
@@ -39,9 +40,21 @@ class TripTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("tripCell", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("tripCell", forIndexPath: indexPath) as! TripTableViewCell
+        //let trip = trips[indexPath]
+        let trip = Trip(name: "TestTrip")
         // Configure the cell...
+        if trip.tripPhotos.count > 0 {
+            cell.imageOne!.image = trip.tripPhotos[0]
+        } else {
+            cell.imageOne!.alpha = 1.0
+        }
+        
+        if trip.tripPhotos.count > 0 {
+            cell.imageTwo!.image = trip.tripPhotos[1]
+        } else {
+            cell.imageOne!.alpha = 1.0
+        }
         
         return cell
     }

@@ -13,6 +13,8 @@
 		C59B5D841C5AFA8D008CF5CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59B5D821C5AFA8D008CF5CA /* LaunchScreen.storyboard */; };
 		C59B5D8F1C5AFA8D008CF5CA /* iOSChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D8E1C5AFA8D008CF5CA /* iOSChallengeUITests.swift */; };
 		C59B5D9A1C5B056C008CF5CA /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D991C5B056C008CF5CA /* TripTableViewController.swift */; };
+		C59B5D9D1C5B06A9008CF5CA /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D9C1C5B06A9008CF5CA /* Trip.swift */; };
+		C59B5D9F1C5B09E4008CF5CA /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D9E1C5B09E4008CF5CA /* TripTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		C59B5D8E1C5AFA8D008CF5CA /* iOSChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSChallengeUITests.swift; sourceTree = "<group>"; };
 		C59B5D901C5AFA8D008CF5CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C59B5D991C5B056C008CF5CA /* TripTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
+		C59B5D9C1C5B06A9008CF5CA /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		C59B5D9E1C5B09E4008CF5CA /* TripTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				C59B5D781C5AFA8D008CF5CA /* iOSChallenge */,
+				C59B5D9B1C5B0697008CF5CA /* Model */,
 				C59B5D8D1C5AFA8D008CF5CA /* iOSChallengeUITests */,
 				C59B5D771C5AFA8D008CF5CA /* Products */,
 			);
@@ -80,6 +85,7 @@
 				C59B5D991C5B056C008CF5CA /* TripTableViewController.swift */,
 				C59B5D791C5AFA8D008CF5CA /* AppDelegate.swift */,
 				C59B5D7D1C5AFA8D008CF5CA /* Main.storyboard */,
+				C59B5D9E1C5B09E4008CF5CA /* TripTableViewCell.swift */,
 				C59B5D801C5AFA8D008CF5CA /* Assets.xcassets */,
 				C59B5D821C5AFA8D008CF5CA /* LaunchScreen.storyboard */,
 				C59B5D851C5AFA8D008CF5CA /* Info.plist */,
@@ -94,6 +100,15 @@
 				C59B5D901C5AFA8D008CF5CA /* Info.plist */,
 			);
 			path = iOSChallengeUITests;
+			sourceTree = "<group>";
+		};
+		C59B5D9B1C5B0697008CF5CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C59B5D9C1C5B06A9008CF5CA /* Trip.swift */,
+			);
+			name = Model;
+			path = iOSChallenge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59B5D9F1C5B09E4008CF5CA /* TripTableViewCell.swift in Sources */,
+				C59B5D9D1C5B06A9008CF5CA /* Trip.swift in Sources */,
 				C59B5D9A1C5B056C008CF5CA /* TripTableViewController.swift in Sources */,
 				C59B5D7A1C5AFA8D008CF5CA /* AppDelegate.swift in Sources */,
 			);
