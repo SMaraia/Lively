@@ -10,11 +10,12 @@
 		C59B5D7A1C5AFA8D008CF5CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D791C5AFA8D008CF5CA /* AppDelegate.swift */; };
 		C59B5D7F1C5AFA8D008CF5CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59B5D7D1C5AFA8D008CF5CA /* Main.storyboard */; };
 		C59B5D811C5AFA8D008CF5CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59B5D801C5AFA8D008CF5CA /* Assets.xcassets */; };
-		C59B5D841C5AFA8D008CF5CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59B5D821C5AFA8D008CF5CA /* LaunchScreen.storyboard */; };
 		C59B5D8F1C5AFA8D008CF5CA /* iOSChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D8E1C5AFA8D008CF5CA /* iOSChallengeUITests.swift */; };
 		C59B5D9A1C5B056C008CF5CA /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D991C5B056C008CF5CA /* TripTableViewController.swift */; };
 		C59B5D9D1C5B06A9008CF5CA /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D9C1C5B06A9008CF5CA /* Trip.swift */; };
 		C59B5D9F1C5B09E4008CF5CA /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D9E1C5B09E4008CF5CA /* TripTableViewCell.swift */; };
+		C59B5DA11C5B0E1D008CF5CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5DA01C5B0E1D008CF5CA /* ViewController.swift */; };
+		C59B5DA51C5B12D7008CF5CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C59B5DA41C5B12D7008CF5CA /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +33,6 @@
 		C59B5D791C5AFA8D008CF5CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59B5D7E1C5AFA8D008CF5CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C59B5D801C5AFA8D008CF5CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C59B5D831C5AFA8D008CF5CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C59B5D851C5AFA8D008CF5CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C59B5D8A1C5AFA8D008CF5CA /* iOSChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59B5D8E1C5AFA8D008CF5CA /* iOSChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSChallengeUITests.swift; sourceTree = "<group>"; };
@@ -40,6 +40,8 @@
 		C59B5D991C5B056C008CF5CA /* TripTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
 		C59B5D9C1C5B06A9008CF5CA /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		C59B5D9E1C5B09E4008CF5CA /* TripTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
+		C59B5DA01C5B0E1D008CF5CA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C59B5DA41C5B12D7008CF5CA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				C59B5D781C5AFA8D008CF5CA /* iOSChallenge */,
-				C59B5D9B1C5B0697008CF5CA /* Model */,
 				C59B5D8D1C5AFA8D008CF5CA /* iOSChallengeUITests */,
 				C59B5D771C5AFA8D008CF5CA /* Products */,
 			);
@@ -82,12 +83,14 @@
 		C59B5D781C5AFA8D008CF5CA /* iOSChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				C59B5D9B1C5B0697008CF5CA /* Model */,
 				C59B5D991C5B056C008CF5CA /* TripTableViewController.swift */,
+				C59B5DA01C5B0E1D008CF5CA /* ViewController.swift */,
 				C59B5D791C5AFA8D008CF5CA /* AppDelegate.swift */,
 				C59B5D7D1C5AFA8D008CF5CA /* Main.storyboard */,
 				C59B5D9E1C5B09E4008CF5CA /* TripTableViewCell.swift */,
 				C59B5D801C5AFA8D008CF5CA /* Assets.xcassets */,
-				C59B5D821C5AFA8D008CF5CA /* LaunchScreen.storyboard */,
+				C59B5DA41C5B12D7008CF5CA /* LaunchScreen.xib */,
 				C59B5D851C5AFA8D008CF5CA /* Info.plist */,
 			);
 			path = iOSChallenge;
@@ -108,7 +111,6 @@
 				C59B5D9C1C5B06A9008CF5CA /* Trip.swift */,
 			);
 			name = Model;
-			path = iOSChallenge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C59B5D841C5AFA8D008CF5CA /* LaunchScreen.storyboard in Resources */,
+				C59B5DA51C5B12D7008CF5CA /* LaunchScreen.xib in Resources */,
 				C59B5D811C5AFA8D008CF5CA /* Assets.xcassets in Resources */,
 				C59B5D7F1C5AFA8D008CF5CA /* Main.storyboard in Resources */,
 			);
@@ -212,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59B5DA11C5B0E1D008CF5CA /* ViewController.swift in Sources */,
 				C59B5D9F1C5B09E4008CF5CA /* TripTableViewCell.swift in Sources */,
 				C59B5D9D1C5B06A9008CF5CA /* Trip.swift in Sources */,
 				C59B5D9A1C5B056C008CF5CA /* TripTableViewController.swift in Sources */,
@@ -244,14 +247,6 @@
 				C59B5D7E1C5AFA8D008CF5CA /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C59B5D821C5AFA8D008CF5CA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C59B5D831C5AFA8D008CF5CA /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

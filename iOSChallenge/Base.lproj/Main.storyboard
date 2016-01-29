@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1CJ-JW-hWy">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -7,81 +7,73 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Trip Table View Controller-->
+        <scene sceneID="zCl-Cd-f61">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="UITableViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="1CJ-JW-hWy" customClass="TripTableViewController" customModule="iOSChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5V9-pa-tAl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="175" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbT-ve-EQ8">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripCell" rowHeight="175" id="9Ha-GH-W8G">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="175"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Ha-GH-W8G" id="2oF-O5-FMI">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="174.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JCH-gV-LJM" userLabel="tripImageTwo">
-                                                    <rect key="frame" x="497" y="50.5" width="75" height="75"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="JCH-gV-LJM" secondAttribute="height" multiplier="1:1" id="JDe-Sz-KUc"/>
-                                                        <constraint firstAttribute="height" constant="75" id="rZ7-oP-Jeg"/>
-                                                        <constraint firstAttribute="width" constant="118" id="zJZ-Kj-7Lm"/>
-                                                    </constraints>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="zJZ-Kj-7Lm"/>
-                                                        </mask>
-                                                    </variation>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tripName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeO-L9-fuC">
-                                                    <rect key="frame" x="28" y="77.5" width="71" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wE7-uQ-6Tf" userLabel="tripImageOne">
-                                                    <rect key="frame" x="402" y="50.5" width="75" height="75"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="75" id="HzH-mM-gcX"/>
-                                                        <constraint firstAttribute="width" secondItem="wE7-uQ-6Tf" secondAttribute="height" multiplier="1:1" id="S0D-xf-6yj"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripCell" rowHeight="175" id="NVB-gD-n2I" customClass="TripTableViewCell" customModule="iOSChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="175"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NVB-gD-n2I" id="LL4-y0-KqF">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="174.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sTk-IW-gxV" userLabel="tripImageOne">
+                                            <rect key="frame" x="497" y="50.5" width="75" height="75"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="JCH-gV-LJM" secondAttribute="trailing" constant="20" id="3Ss-WH-F5W"/>
-                                                <constraint firstItem="JCH-gV-LJM" firstAttribute="centerY" secondItem="2oF-O5-FMI" secondAttribute="centerY" id="Wng-p0-7SQ"/>
-                                                <constraint firstItem="qeO-L9-fuC" firstAttribute="centerY" secondItem="2oF-O5-FMI" secondAttribute="centerY" id="gce-bS-Swr"/>
-                                                <constraint firstItem="wE7-uQ-6Tf" firstAttribute="top" secondItem="JCH-gV-LJM" secondAttribute="top" id="icm-mP-zFb"/>
-                                                <constraint firstItem="qeO-L9-fuC" firstAttribute="leading" secondItem="2oF-O5-FMI" secondAttribute="leadingMargin" constant="20" id="shn-k0-MuX"/>
-                                                <constraint firstItem="JCH-gV-LJM" firstAttribute="leading" secondItem="wE7-uQ-6Tf" secondAttribute="trailing" constant="20" id="vb5-Rc-1vY"/>
+                                                <constraint firstAttribute="height" constant="75" id="YXu-hA-gtl"/>
+                                                <constraint firstAttribute="width" constant="118" id="eJe-Ge-ZSC"/>
+                                                <constraint firstAttribute="width" secondItem="sTk-IW-gxV" secondAttribute="height" multiplier="1:1" id="naF-yb-whj"/>
                                             </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="vbT-ve-EQ8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OCk-Ok-6fG"/>
-                            <constraint firstItem="vbT-ve-EQ8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZWU-XB-DKc"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vbT-ve-EQ8" secondAttribute="bottom" id="bYz-gb-m5L"/>
-                            <constraint firstAttribute="trailing" secondItem="vbT-ve-EQ8" secondAttribute="trailing" id="t8E-hi-KQ1"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="eJe-Ge-ZSC"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tripName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pz3-1h-4FJ">
+                                            <rect key="frame" x="28" y="77.5" width="71" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TJ3-xp-jJw" userLabel="tripImageTwo">
+                                            <rect key="frame" x="402" y="50.5" width="75" height="75"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="TJ3-xp-jJw" secondAttribute="height" multiplier="1:1" id="3B7-8E-qtE"/>
+                                                <constraint firstAttribute="width" constant="75" id="b7K-MQ-CWD"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pz3-1h-4FJ" firstAttribute="centerY" secondItem="LL4-y0-KqF" secondAttribute="centerY" id="3V0-LP-rbo"/>
+                                        <constraint firstItem="sTk-IW-gxV" firstAttribute="leading" secondItem="TJ3-xp-jJw" secondAttribute="trailing" constant="20" id="Ko1-82-o7W"/>
+                                        <constraint firstItem="TJ3-xp-jJw" firstAttribute="top" secondItem="sTk-IW-gxV" secondAttribute="top" id="MrW-Sz-k8M"/>
+                                        <constraint firstItem="sTk-IW-gxV" firstAttribute="centerY" secondItem="LL4-y0-KqF" secondAttribute="centerY" id="Ohi-S4-2KC"/>
+                                        <constraint firstItem="pz3-1h-4FJ" firstAttribute="leading" secondItem="LL4-y0-KqF" secondAttribute="leadingMargin" constant="20" id="Pyn-xR-9ci"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="sTk-IW-gxV" secondAttribute="trailing" constant="20" id="zzQ-Xl-rMZ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageOne" destination="sTk-IW-gxV" id="3Ja-un-GEj"/>
+                                    <outlet property="imageTwo" destination="TJ3-xp-jJw" id="eRx-Wo-Fvs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1CJ-JW-hWy" id="YQG-kE-KFn"/>
+                            <outlet property="delegate" destination="1CJ-JW-hWy" id="tfi-xu-egS"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCD-6F-Y8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341" y="344"/>
+            <point key="canvasLocation" x="797" y="-391"/>
         </scene>
     </scenes>
 </document>
