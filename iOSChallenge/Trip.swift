@@ -33,3 +33,36 @@ class Trip: NSObject, NSCoding {
         self.tripDescription = ""
     }
 }
+
+class TripHolder: NSObject, NSCoding {
+    var trips : [Trip]
+    override init() {
+        self.trips = []
+        super.init()
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(trips, forKey: "TRIPS")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.trips = aDecoder.decodeObjectForKey("TRIPS") as! [Trip]
+    }
+    
+    var count: Int {
+        return self.trips.count
+    }
+    
+    subscript(index: Int) -> Trip {
+        get{
+            return self.trips[index]
+        }
+        
+        set{
+            self.trips[index] = newValue
+        }
+        
+    }
+}
+
+var trips = TripHolder()
