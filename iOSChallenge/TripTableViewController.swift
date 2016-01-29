@@ -44,17 +44,19 @@ class TripTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("tripCell", forIndexPath: indexPath) as! TripTableViewCell
         let trip = trips[indexPath.row]
         // Configure the cell...
+        cell.textLabel?.text = trip.name
         if trip.tripPhotos.count > 0 {
             cell.imageOne!.image = trip.tripPhotos[0]
         } else {
             cell.imageOne!.alpha = 1.0
         }
         
-        if trip.tripPhotos.count > 0 {
+        if trip.tripPhotos.count > 1 {
             cell.imageTwo!.image = trip.tripPhotos[1]
         } else {
             cell.imageOne!.alpha = 1.0
         }
+        
         
         return cell
     }
@@ -114,14 +116,20 @@ class TripTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowDetail" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let tripToSend = trips[indexPath.row] as Trip
+                (segue.destinationViewController as! TripViewController).trip = tripToSend
+            }
+        }
     }
-    */
+    
 
 }
