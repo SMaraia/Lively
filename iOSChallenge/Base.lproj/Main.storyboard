@@ -84,7 +84,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCD-6F-Y8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1634.5" y="-435.5"/>
+            <point key="canvasLocation" x="1458.5" y="-436.5"/>
         </scene>
         <!--Trip View Controller-->
         <scene sceneID="nWh-2n-TCm">
@@ -116,6 +116,7 @@
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="jgZ-gs-nFw" secondAttribute="trailing" constant="20" id="9t9-L6-BU1"/>
                                             <constraint firstItem="jgZ-gs-nFw" firstAttribute="centerY" secondItem="SRi-bd-hxu" secondAttribute="centerY" id="OFm-D9-a1S"/>
@@ -135,6 +136,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYf-C9-UXC">
                                                 <rect key="frame" x="20" y="65.5" width="54" height="20.5"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="SOz-kb-71d"/>
                                                 </constraints>
@@ -163,6 +165,7 @@
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="mPn-Tk-Exh" firstAttribute="leading" secondItem="5h1-Yp-ZaL" secondAttribute="trailing" constant="8" id="2c4-fv-amg"/>
                                             <constraint firstAttribute="trailing" secondItem="mPn-Tk-Exh" secondAttribute="trailing" constant="20" id="C2o-Rb-FWL"/>
@@ -248,6 +251,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="PhotoView" destination="ABB-V2-Upk" id="oYb-g0-bTz"/>
                         <outlet property="TextView" destination="ADx-Ff-BM3" id="ZZJ-K4-2C3"/>
                         <outlet property="TripImageOne" destination="mPn-Tk-Exh" id="juf-se-ozf"/>
                         <outlet property="TripImageTwo" destination="5h1-Yp-ZaL" id="QeV-Wq-S4R"/>
@@ -256,7 +260,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCY-iJ-f1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2079.5" y="-436.5"/>
+            <point key="canvasLocation" x="2057.5" y="-436.5"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="RLw-uM-baI">
+            <objects>
+                <viewController id="xjY-hn-V6G" customClass="PhotoViewController" customModule="iOSChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rn1-Jy-Uzw"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ds7-MS-DeQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sqJ-52-4aC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3J-4d-lsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2635.5" y="-436.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SqX-jD-2i7">

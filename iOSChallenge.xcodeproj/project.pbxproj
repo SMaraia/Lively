@@ -14,7 +14,7 @@
 		C59B5D9A1C5B056C008CF5CA /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D991C5B056C008CF5CA /* TripTableViewController.swift */; };
 		C59B5D9D1C5B06A9008CF5CA /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D9C1C5B06A9008CF5CA /* Trip.swift */; };
 		C59B5D9F1C5B09E4008CF5CA /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D9E1C5B09E4008CF5CA /* TripTableViewCell.swift */; };
-		C59B5DA11C5B0E1D008CF5CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5DA01C5B0E1D008CF5CA /* ViewController.swift */; };
+		C59B5DA11C5B0E1D008CF5CA /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5DA01C5B0E1D008CF5CA /* PhotoViewController.swift */; };
 		C59B5DA51C5B12D7008CF5CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C59B5DA41C5B12D7008CF5CA /* LaunchScreen.xib */; };
 		C5FEA8891C5BFF4E00C3138F /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FEA8881C5BFF4E00C3138F /* TripViewController.swift */; };
 		C5FEA88B1C5C0ED900C3138F /* FileHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FEA88A1C5C0ED900C3138F /* FileHelperFunctions.swift */; };
@@ -43,7 +43,7 @@
 		C59B5D991C5B056C008CF5CA /* TripTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
 		C59B5D9C1C5B06A9008CF5CA /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		C59B5D9E1C5B09E4008CF5CA /* TripTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
-		C59B5DA01C5B0E1D008CF5CA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C59B5DA01C5B0E1D008CF5CA /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		C59B5DA41C5B12D7008CF5CA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../LaunchScreen.xib; sourceTree = "<group>"; };
 		C5FEA8881C5BFF4E00C3138F /* TripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		C5FEA88A1C5C0ED900C3138F /* FileHelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHelperFunctions.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 				C59B5D991C5B056C008CF5CA /* TripTableViewController.swift */,
 				C5FEA8881C5BFF4E00C3138F /* TripViewController.swift */,
 				C59B5D9E1C5B09E4008CF5CA /* TripTableViewCell.swift */,
-				C59B5DA01C5B0E1D008CF5CA /* ViewController.swift */,
+				C59B5DA01C5B0E1D008CF5CA /* PhotoViewController.swift */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -238,7 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5FEA88B1C5C0ED900C3138F /* FileHelperFunctions.swift in Sources */,
-				C59B5DA11C5B0E1D008CF5CA /* ViewController.swift in Sources */,
+				C59B5DA11C5B0E1D008CF5CA /* PhotoViewController.swift in Sources */,
 				C59B5D9F1C5B09E4008CF5CA /* TripTableViewCell.swift in Sources */,
 				C59B5D9D1C5B06A9008CF5CA /* Trip.swift in Sources */,
 				C5FEA8891C5BFF4E00C3138F /* TripViewController.swift in Sources */,

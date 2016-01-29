@@ -8,11 +8,12 @@
 
 import UIKit
 
-class TripViewController: UIViewController, UITextViewDelegate{
+class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate {
     @IBOutlet weak var TextView: UITextView!
     @IBOutlet weak var TripImageOne: UIImageView!
     @IBOutlet weak var TripImageTwo: UIImageView!
     @IBOutlet weak var TripName: UILabel!
+    @IBOutlet weak var PhotoView: UIView!
     
     var TripIndex: Int? {
         didSet{
@@ -20,9 +21,6 @@ class TripViewController: UIViewController, UITextViewDelegate{
         }
     }
     
-    @IBAction func exit(sender: AnyObject) {
-        self
-    }
     func configureView() {
         if TextView != nil {
             if let index: Int = TripIndex {
@@ -44,14 +42,19 @@ class TripViewController: UIViewController, UITextViewDelegate{
                     TripImageTwo.tintColor = UIColor.blackColor()
                 }
             }
-            }
         }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         TextView.delegate = self
 
+        let photoTapped = UITapGestureRecognizer(target: self, action: "photosTapped:")
+        photoTapped.delegate = self
+        
+        PhotoView.addGestureRecognizer(photoTapped)
+        
         self.configureView()
     }
     
@@ -60,6 +63,9 @@ class TripViewController: UIViewController, UITextViewDelegate{
     }
     
 
+    func photosTapped(sender: UITapGestureRecognizer? = nil) {
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
