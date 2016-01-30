@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C52BAC581C5C3D7800FAD67F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BAC571C5C3D7800FAD67F /* AppDelegate.swift */; };
+		C52BAC5A1C5C3D7800FAD67F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BAC591C5C3D7800FAD67F /* ViewController.swift */; };
+		C52BAC5D1C5C3D7800FAD67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52BAC5B1C5C3D7800FAD67F /* Main.storyboard */; };
+		C52BAC5F1C5C3D7800FAD67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52BAC5E1C5C3D7800FAD67F /* Assets.xcassets */; };
+		C52BAC6A1C5C3D7800FAD67F /* tvChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BAC691C5C3D7800FAD67F /* tvChallengeUITests.swift */; };
 		C59B5D7A1C5AFA8D008CF5CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D791C5AFA8D008CF5CA /* AppDelegate.swift */; };
 		C59B5D7F1C5AFA8D008CF5CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59B5D7D1C5AFA8D008CF5CA /* Main.storyboard */; };
 		C59B5D811C5AFA8D008CF5CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59B5D801C5AFA8D008CF5CA /* Assets.xcassets */; };
@@ -22,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C52BAC661C5C3D7800FAD67F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C59B5D6E1C5AFA8D008CF5CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C52BAC541C5C3D7800FAD67F;
+			remoteInfo = tvChallenge;
+		};
 		C59B5D8B1C5AFA8D008CF5CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C59B5D6E1C5AFA8D008CF5CA /* Project object */;
@@ -32,6 +44,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C52BAC4E1C5C3B4000FAD67F /* iOSChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iOSChallenge.entitlements; sourceTree = "<group>"; };
+		C52BAC551C5C3D7800FAD67F /* tvChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52BAC571C5C3D7800FAD67F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C52BAC591C5C3D7800FAD67F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../tvChallenge/ViewController.swift; sourceTree = "<group>"; };
+		C52BAC5C1C5C3D7800FAD67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C52BAC5E1C5C3D7800FAD67F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C52BAC601C5C3D7800FAD67F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C52BAC651C5C3D7800FAD67F /* tvChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tvChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52BAC691C5C3D7800FAD67F /* tvChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tvChallengeUITests.swift; sourceTree = "<group>"; };
+		C52BAC6B1C5C3D7800FAD67F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C52BAC721C5C3D8500FAD67F /* tvChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = tvChallenge.entitlements; sourceTree = "<group>"; };
 		C59B5D761C5AFA8D008CF5CA /* iOSChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59B5D791C5AFA8D008CF5CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59B5D7E1C5AFA8D008CF5CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +74,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C52BAC521C5C3D7800FAD67F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52BAC621C5C3D7800FAD67F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C59B5D731C5AFA8D008CF5CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,12 +106,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C51D3BE21C5C40B700F662B8 /* TVVC */ = {
+			isa = PBXGroup;
+			children = (
+				C52BAC591C5C3D7800FAD67F /* ViewController.swift */,
+			);
+			name = TVVC;
+			path = ../iOSChallenge;
+			sourceTree = "<group>";
+		};
+		C52BAC561C5C3D7800FAD67F /* tvChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				C51D3BE21C5C40B700F662B8 /* TVVC */,
+				C52BAC721C5C3D8500FAD67F /* tvChallenge.entitlements */,
+				C52BAC571C5C3D7800FAD67F /* AppDelegate.swift */,
+				C52BAC5B1C5C3D7800FAD67F /* Main.storyboard */,
+				C52BAC5E1C5C3D7800FAD67F /* Assets.xcassets */,
+				C52BAC601C5C3D7800FAD67F /* Info.plist */,
+			);
+			path = tvChallenge;
+			sourceTree = "<group>";
+		};
+		C52BAC681C5C3D7800FAD67F /* tvChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C52BAC691C5C3D7800FAD67F /* tvChallengeUITests.swift */,
+				C52BAC6B1C5C3D7800FAD67F /* Info.plist */,
+			);
+			path = tvChallengeUITests;
+			sourceTree = "<group>";
+		};
 		C59B5D6D1C5AFA8D008CF5CA = {
 			isa = PBXGroup;
 			children = (
+				C59B5D9B1C5B0697008CF5CA /* Model */,
 				C5FEA88C1C5C210400C3138F /* MapKit.framework */,
 				C59B5D781C5AFA8D008CF5CA /* iOSChallenge */,
 				C59B5D8D1C5AFA8D008CF5CA /* iOSChallengeUITests */,
+				C52BAC561C5C3D7800FAD67F /* tvChallenge */,
+				C52BAC681C5C3D7800FAD67F /* tvChallengeUITests */,
 				C59B5D771C5AFA8D008CF5CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +155,8 @@
 			children = (
 				C59B5D761C5AFA8D008CF5CA /* iOSChallenge.app */,
 				C59B5D8A1C5AFA8D008CF5CA /* iOSChallengeUITests.xctest */,
+				C52BAC551C5C3D7800FAD67F /* tvChallenge.app */,
+				C52BAC651C5C3D7800FAD67F /* tvChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,9 +164,9 @@
 		C59B5D781C5AFA8D008CF5CA /* iOSChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				C59B5D9B1C5B0697008CF5CA /* Model */,
-				C5FEA88E1C5C21AB00C3138F /* VC */,
+				C52BAC4E1C5C3B4000FAD67F /* iOSChallenge.entitlements */,
 				C59B5D791C5AFA8D008CF5CA /* AppDelegate.swift */,
+				C5FEA88E1C5C21AB00C3138F /* PhoneVC */,
 				C59B5D7D1C5AFA8D008CF5CA /* Main.storyboard */,
 				C59B5D801C5AFA8D008CF5CA /* Assets.xcassets */,
 				C59B5DA41C5B12D7008CF5CA /* LaunchScreen.xib */,
@@ -118,9 +191,10 @@
 				C59B5D9C1C5B06A9008CF5CA /* Trip.swift */,
 			);
 			name = Model;
+			path = iOSChallenge;
 			sourceTree = "<group>";
 		};
-		C5FEA88E1C5C21AB00C3138F /* VC */ = {
+		C5FEA88E1C5C21AB00C3138F /* PhoneVC */ = {
 			isa = PBXGroup;
 			children = (
 				C59B5D991C5B056C008CF5CA /* TripTableViewController.swift */,
@@ -128,12 +202,47 @@
 				C59B5D9E1C5B09E4008CF5CA /* TripTableViewCell.swift */,
 				C59B5DA01C5B0E1D008CF5CA /* PhotoViewController.swift */,
 			);
-			name = VC;
+			name = PhoneVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C52BAC541C5C3D7800FAD67F /* tvChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C52BAC6C1C5C3D7800FAD67F /* Build configuration list for PBXNativeTarget "tvChallenge" */;
+			buildPhases = (
+				C52BAC511C5C3D7800FAD67F /* Sources */,
+				C52BAC521C5C3D7800FAD67F /* Frameworks */,
+				C52BAC531C5C3D7800FAD67F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tvChallenge;
+			productName = tvChallenge;
+			productReference = C52BAC551C5C3D7800FAD67F /* tvChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C52BAC641C5C3D7800FAD67F /* tvChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C52BAC6F1C5C3D7800FAD67F /* Build configuration list for PBXNativeTarget "tvChallengeUITests" */;
+			buildPhases = (
+				C52BAC611C5C3D7800FAD67F /* Sources */,
+				C52BAC621C5C3D7800FAD67F /* Frameworks */,
+				C52BAC631C5C3D7800FAD67F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C52BAC671C5C3D7800FAD67F /* PBXTargetDependency */,
+			);
+			name = tvChallengeUITests;
+			productName = tvChallengeUITests;
+			productReference = C52BAC651C5C3D7800FAD67F /* tvChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C59B5D751C5AFA8D008CF5CA /* iOSChallenge */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C59B5D931C5AFA8D008CF5CA /* Build configuration list for PBXNativeTarget "iOSChallenge" */;
@@ -179,10 +288,27 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Sean Maraia";
 				TargetAttributes = {
+					C52BAC541C5C3D7800FAD67F = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = ZK6B9E922P;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					C52BAC641C5C3D7800FAD67F = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C52BAC541C5C3D7800FAD67F;
+					};
 					C59B5D751C5AFA8D008CF5CA = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = ZK6B9E922P;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
 								enabled = 1;
 							};
 						};
@@ -208,11 +334,29 @@
 			targets = (
 				C59B5D751C5AFA8D008CF5CA /* iOSChallenge */,
 				C59B5D891C5AFA8D008CF5CA /* iOSChallengeUITests */,
+				C52BAC541C5C3D7800FAD67F /* tvChallenge */,
+				C52BAC641C5C3D7800FAD67F /* tvChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C52BAC531C5C3D7800FAD67F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52BAC5F1C5C3D7800FAD67F /* Assets.xcassets in Resources */,
+				C52BAC5D1C5C3D7800FAD67F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52BAC631C5C3D7800FAD67F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C59B5D741C5AFA8D008CF5CA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +377,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C52BAC511C5C3D7800FAD67F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52BAC5A1C5C3D7800FAD67F /* ViewController.swift in Sources */,
+				C52BAC581C5C3D7800FAD67F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52BAC611C5C3D7800FAD67F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52BAC6A1C5C3D7800FAD67F /* tvChallengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C59B5D721C5AFA8D008CF5CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,6 +419,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C52BAC671C5C3D7800FAD67F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C52BAC541C5C3D7800FAD67F /* tvChallenge */;
+			targetProxy = C52BAC661C5C3D7800FAD67F /* PBXContainerItemProxy */;
+		};
 		C59B5D8C1C5AFA8D008CF5CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C59B5D751C5AFA8D008CF5CA /* iOSChallenge */;
@@ -266,6 +432,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C52BAC5B1C5C3D7800FAD67F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C52BAC5C1C5C3D7800FAD67F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		C59B5D7D1C5AFA8D008CF5CA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -277,6 +451,72 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C52BAC6D1C5C3D7800FAD67F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = tvChallenge/tvChallenge.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				INFOPLIST_FILE = tvChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.SeanMaraia.LivelyTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		C52BAC6E1C5C3D7800FAD67F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = tvChallenge/tvChallenge.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				INFOPLIST_FILE = tvChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.SeanMaraia.LivelyTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		C52BAC701C5C3D7800FAD67F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = tvChallengeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.SeanMaraia.tvChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_TARGET_NAME = tvChallenge;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C52BAC711C5C3D7800FAD67F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = tvChallengeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.SeanMaraia.tvChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_TARGET_NAME = tvChallenge;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 		C59B5D911C5AFA8D008CF5CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -364,10 +604,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOSChallenge/iOSChallenge.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOSChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.SeanMaraia.iOSChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = me.SeanMaraia.LivelyiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -375,10 +619,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOSChallenge/iOSChallenge.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOSChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.SeanMaraia.iOSChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = me.SeanMaraia.LivelyiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -409,6 +657,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C52BAC6C1C5C3D7800FAD67F /* Build configuration list for PBXNativeTarget "tvChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52BAC6D1C5C3D7800FAD67F /* Debug */,
+				C52BAC6E1C5C3D7800FAD67F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C52BAC6F1C5C3D7800FAD67F /* Build configuration list for PBXNativeTarget "tvChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52BAC701C5C3D7800FAD67F /* Debug */,
+				C52BAC711C5C3D7800FAD67F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C59B5D711C5AFA8D008CF5CA /* Build configuration list for PBXProject "iOSChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

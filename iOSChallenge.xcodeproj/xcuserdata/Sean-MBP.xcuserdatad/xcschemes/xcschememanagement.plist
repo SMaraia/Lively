@@ -9,9 +9,24 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>tvChallenge.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>C52BAC541C5C3D7800FAD67F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C52BAC641C5C3D7800FAD67F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C59B5D751C5AFA8D008CF5CA</key>
 		<dict>
 			<key>primary</key>
