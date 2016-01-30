@@ -19,8 +19,8 @@ class Trip: NSObject, NSCoding {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.name = aDecoder.decodeObjectForKey("NAME") as! String
-        self.moments = aDecoder.decodeObjectForKey("PHOTOS") as! [Moment]
+        self.name = aDecoder.decodeObjectForKey("TRIP_NAME") as! String
+        self.moments = aDecoder.decodeObjectForKey("TRIP_MOMENTS") as! [Moment]
         super.init()
     }
     

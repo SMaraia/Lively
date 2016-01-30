@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Trip Table View Controller-->
+        <!--Lively-->
         <scene sceneID="zCl-Cd-f61">
             <objects>
                 <tableViewController id="1CJ-JW-hWy" customClass="TripTableViewController" customModule="iOSChallenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,8 +72,8 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Ghw-Js-Meb">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="Phk-D2-wgq">
+                    <navigationItem key="navigationItem" title="Lively" id="Ghw-Js-Meb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Phk-D2-wgq">
                             <connections>
                                 <action selector="AddTapped:" destination="1CJ-JW-hWy" id="N9v-re-SiJ"/>
                             </connections>
@@ -86,7 +86,7 @@
             </objects>
             <point key="canvasLocation" x="1458.5" y="-436.5"/>
         </scene>
-        <!--Trip View Controller-->
+        <!--Lively-->
         <scene sceneID="nWh-2n-TCm">
             <objects>
                 <viewController id="dea-T1-l8Z" customClass="TripViewController" customModule="iOSChallenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,18 +99,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TripName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICa-QH-SwP">
-                                <rect key="frame" x="36" y="97" width="75" height="21"/>
+                                <rect key="frame" x="36" y="97" width="74.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgZ-gs-nFw">
-                                <rect key="frame" x="293" y="97" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="272" y="97" width="67" height="30"/>
+                                <state key="normal" title="Locations"/>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E1n-kj-wxZ">
                                 <rect key="frame" x="0.0" y="146" width="375" height="477"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eBU-la-RRI">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="1" minimumInteritemSpacing="10" id="eBU-la-RRI">
                                     <size key="itemSize" width="350" height="400"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -125,14 +125,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FHf-RY-Pkz">
-                                                    <rect key="frame" x="28" y="257" width="294" height="143"/>
+                                                    <rect key="frame" x="28" y="245" width="294" height="154.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mPn-Tk-Exh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="257"/>
+                                                    <rect key="frame" x="8" y="0.0" width="334" height="245.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="mPn-Tk-Exh" secondAttribute="height" multiplier="1:1" id="Aap-uq-WGY"/>
                                                         <constraint firstAttribute="width" constant="75" id="GR6-YK-tDv"/>
@@ -155,12 +155,18 @@
                                             <constraint firstAttribute="bottomMargin" secondItem="FHf-RY-Pkz" secondAttribute="bottom" constant="-8" id="NEH-zM-hiE"/>
                                             <constraint firstItem="mPn-Tk-Exh" firstAttribute="leading" secondItem="vPa-pW-2ke" secondAttribute="leading" id="RLl-w2-35x"/>
                                             <constraint firstItem="FHf-RY-Pkz" firstAttribute="top" secondItem="mPn-Tk-Exh" secondAttribute="bottom" id="eOD-8k-je1"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="mPn-Tk-Exh" secondAttribute="trailing" constant="-8" id="eTx-Vp-hBH"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="mPn-Tk-Exh" secondAttribute="trailing" id="eTx-Vp-hBH"/>
                                             <constraint firstAttribute="trailing" secondItem="mPn-Tk-Exh" secondAttribute="trailing" id="h2h-JI-pqO"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="FHf-RY-Pkz" secondAttribute="trailing" constant="20" id="kiq-ms-JlB"/>
-                                            <constraint firstItem="mPn-Tk-Exh" firstAttribute="leading" secondItem="vPa-pW-2ke" secondAttribute="leadingMargin" constant="-8" id="vGX-6H-ZB9"/>
+                                            <constraint firstItem="mPn-Tk-Exh" firstAttribute="leading" secondItem="vPa-pW-2ke" secondAttribute="leadingMargin" id="vGX-6H-ZB9"/>
                                             <constraint firstItem="FHf-RY-Pkz" firstAttribute="leading" secondItem="vPa-pW-2ke" secondAttribute="leadingMargin" constant="20" id="wey-AH-Ik8"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="RLl-w2-35x"/>
+                                                <exclude reference="h2h-JI-pqO"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <outlet property="momentImageView" destination="mPn-Tk-Exh" id="Um1-6A-xLc"/>
                                             <outlet property="momentTextView" destination="FHf-RY-Pkz" id="37Z-p3-TRO"/>
@@ -194,9 +200,18 @@
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Lively" id="Elx-kf-Pnn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Aqu-iS-ymt">
+                            <connections>
+                                <action selector="addMoment:" destination="dea-T1-l8Z" id="BtO-Ay-RoN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="TripName" destination="ICa-QH-SwP" id="Hbo-Ac-lkz"/>
+                        <outlet property="momentCollectionView" destination="E1n-kj-wxZ" id="mE2-2A-YRm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCY-iJ-f1y" userLabel="First Responder" sceneMemberID="firstResponder"/>

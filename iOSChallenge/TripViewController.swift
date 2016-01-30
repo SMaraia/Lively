@@ -8,9 +8,10 @@
 
 import UIKit
 
-class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var TripName: UILabel!
     
+    @IBOutlet weak var momentCollectionView: UICollectionView!
     
     var TripIndex: Int? {
         didSet{
@@ -35,11 +36,31 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
             }
         }
     }*/
+    @IBAction func addMoment(sender: AnyObject) {
+    
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .PhotoLibrary
+        imagePickerController.allowsEditing = true
+        
+        self.presentViewController(imagePickerController, animated: true, completion: nil)
+
+        
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        print(info.count)
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        momentCollectionView.delegate = self
+        }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -51,6 +72,7 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         let moment = trips[TripIndex!].moments[indexPath.row]
         // Configure the cell...
         cell.momentImageView?.image = moment.image
+        
         cell.momentTextView?.text = moment.journalLog
         
         cell.momentTextView?.delegate = self
