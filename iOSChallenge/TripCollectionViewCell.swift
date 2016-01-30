@@ -8,9 +8,16 @@
 
 import UIKit
 
-class TripCollectionViewCell: UICollectionViewCell {
+class TripCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     @IBOutlet weak var momentImageView : UIImageView?
     @IBOutlet weak var momentTextView: UITextView?
     
+    var momentIndex: Int?
+    var tripIndex: Int?
     
+    func textViewDidEndEditing(textView: UITextView) {
+        if let index: Int = momentIndex {
+            trips[tripIndex!].moments[index].journalLog = textView.text
+        }
+    }
 }

@@ -12,8 +12,6 @@ import UIKit
 class TripTableViewController: UITableViewController {
 
     
-    let SAVED_FILE_NAME = "Trips.archive"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -132,17 +130,12 @@ class TripTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "ShowDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                (segue.destinationViewController as! TripViewController).TripIndex = indexPath.row
+                (segue.destinationViewController as! TripViewController).tripIndex = indexPath.row
             }
         }
     }
     
-    // MARK: - Saving Data -
-    func saveData(){
-        //saves favorites object, including array of favorite Games, to documents folder
-        let pathToFile = FilePathInDocumentsDirectory(SAVED_FILE_NAME)
-        _ = NSKeyedArchiver.archiveRootObject(trips, toFile: pathToFile)
-    }
+    
     
 
 }

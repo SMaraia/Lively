@@ -13,7 +13,7 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     
     @IBOutlet weak var momentCollectionView: UICollectionView!
     
-    var TripIndex: Int? {
+    var tripIndex: Int? {
         didSet{
             //self.configureView()
         }
@@ -21,7 +21,7 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     
     /*func configureView() {
         if TextView != nil {
-            if let index: Int = TripIndex {
+            if let index: Int = tripIndex {
                 TripName.text = trips[index].name
                 if trips[index].tripDescription != "" {
                     TextView.text = trips[index].tripDescription
@@ -48,15 +48,20 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        print(info.count)
-        
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        let newMoment = Moment(index: trips[tripIndex!].moments.count)
+        newMoment.image = image
+        newMoment.journalLog = "Fill in your thoughts Here!"
+        trips[tripIndex!].moments.append(newMoment)
         self.dismissViewControllerAnimated(true, completion: nil)
+        momentCollectionView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         momentCollectionView.delegate = self
+        momentCollectionView.dataSource = self
         }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -64,18 +69,21 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return trips[TripIndex!].moments.count
+        return trips[tripIndex!].moments.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("momentCell", forIndexPath: indexPath) as! TripCollectionViewCell
-        let moment = trips[TripIndex!].moments[indexPath.row]
+        let moment = trips[tripIndex!].moments[indexPath.row]
         // Configure the cell...
         cell.momentImageView?.image = moment.image
         
         cell.momentTextView?.text = moment.journalLog
         
-        cell.momentTextView?.delegate = self
+        cell.momentTextView?.delegate = cell
+        
+        cell.momentIndex = indexPath.row
+        cell.tripIndex = tripIndex!
         
         return cell
 
