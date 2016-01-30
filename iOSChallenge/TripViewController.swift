@@ -15,6 +15,11 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     
     var addButton : UIBarButtonItem?
 
+    var keyboardSize: CGRect?
+    @IBOutlet weak var containingViewBottomConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var containingViewTopConstraint: NSLayoutConstraint!
+    
     var tripIndex: Int? {
         didSet{
             //self.configureView()
@@ -51,6 +56,33 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         
     }
     
+
+    
+    func keyboardWasShown(notification: NSNotification){
+        var userInfo : Dictionary = notification.userInfo!
+        keyboardSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        
+        let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! Double
+        UIView.animateWithDuration(duration, animations: {
+            self.containingViewBottomConstraint.constant = (self.keyboardSize?.height)!
+            self.containingViewTopConstraint.constant = -(self.keyboardSize?.height)!
+            self.view.layoutIfNeeded()
+        })
+        
+        
+        
+    }
+    
+    func keyboardWasHidden(notification: NSNotification){
+        var userInfo : Dictionary = notification.userInfo!
+        let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! Double
+        UIView.animateWithDuration(duration, animations: {
+        self.containingViewBottomConstraint.constant = 0
+        self.containingViewTopConstraint.constant = 0
+        self.view.layoutIfNeeded()
+    })
+    
+    }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         let newMoment = Moment(index: trips[tripIndex!].moments.count)
@@ -66,6 +98,9 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         momentCollectionView.delegate = self
         momentCollectionView.dataSource = self
         addButton = navigationItem.rightBarButtonItem!
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWasShown:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWasHidden:"), name:UIKeyboardWillHideNotification, object: nil);
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -99,11 +134,13 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: tripCollectionViewCell, action: "stopEditing")
         navigationItem.rightBarButtonItem = doneButton
         momentCollectionView.scrollEnabled = false
+        
     }
     
     func finishedEditingTextView(tripCollectionViewCell: TripCollectionViewCell) {
         navigationItem.rightBarButtonItem = addButton
         momentCollectionView.scrollEnabled = true
+        
     }
     
     func photosTapped(sender: UITapGestureRecognizer? = nil) {

@@ -20,14 +20,18 @@ class TripCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     var delegate: TripCollectionViewCellDelegate?
     var momentIndex: Int?
     var tripIndex: Int?
+
     
     func textViewDidBeginEditing(textView: UITextView) {
         //Keyboard becomes visible
+        //TODO: - find way to replace -215 + 50 magic with the actual height of the keyboard
         self.delegate?.beganEditingTextView(self)
-        self.superview?.superview!.frame = CGRectMake((self.superview?.superview!.frame.origin.x)!,
-            (self.superview?.superview!.frame.origin.y)!,
-            (self.superview?.superview!.frame.size.width)!,
-            (self.superview?.superview!.frame.size.height)! - 215 + 50)   //resize
+        
+        
+        //resize superviews
+
+
+        //TODO: - move textView bottom to the top of the keyboard
     }
     
     func textViewDidChange(textView: UITextView) {
@@ -39,14 +43,26 @@ class TripCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         self.momentTextView?.endEditing(true)
     }
     
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if text == "/n"{
+        textView.frame =  CGRectMake(textView.frame.origin.x, 0, textView.frame.width, textView.frame.height)
+        return false
+        }
+        return true
+    }
+    
     func textViewDidEndEditing(textView: UITextView) {
         //keyboard will hide
+        //TODO: - find way to replace -215 + 50 magic with the actual height of the keyboard
         self.delegate?.finishedEditingTextView(self)
-        self.superview?.superview!.frame = CGRectMake((self.superview?.superview!.frame.origin.x)!,
+        let tripViewController = delegate as! TripViewController
+        /*self.superview?.superview!.frame = CGRectMake((self.superview?.superview!.frame.origin.x)!,
             (self.superview?.superview!.frame.origin.y)!,
             (self.superview?.superview!.frame.size.width)!,
-            (self.superview?.superview!.frame.size.height)! + 215 - 50) //resize
+            (self.superview?.superview!.frame.size.height)! + tripViewController.keyboardSize!.height) //resize*/
         
+        //TODO: - move textView bottom to bottom of the screen
+        //textView.frame = CGRectMake(textView.frame.origin.x, textView.frame.origin.y, <#T##width: CGFloat##CGFloat#>, <#T##height: CGFloat##CGFloat#>)
         if let index: Int = momentIndex {
 
             trips[tripIndex!].moments[index].journalLog = textView.text
