@@ -52,14 +52,14 @@ class TripTableViewController: UITableViewController {
         let trip = trips[indexPath.row]
         // Configure the cell...
         cell.textLabel?.text = trip.name
-        if trip.tripPhotos.count > 0 {
-            cell.imageOne!.image = trip.tripPhotos[0]
+        if trip.moments.count > 0 {
+            cell.imageOne!.image = trip.moments[0].image
         } else {
             cell.imageOne!.alpha = 1.0
         }
         
-        if trip.tripPhotos.count > 1 {
-            cell.imageTwo!.image = trip.tripPhotos[1]
+        if trip.moments.count > 1 {
+            cell.imageTwo!.image = trip.moments[1].image
         } else {
             cell.imageOne!.alpha = 1.0
         }
@@ -141,7 +141,7 @@ class TripTableViewController: UITableViewController {
     func saveData(){
         //saves favorites object, including array of favorite Games, to documents folder
         let pathToFile = FilePathInDocumentsDirectory(SAVED_FILE_NAME)
-        var success = NSKeyedArchiver.archiveRootObject(trips, toFile: pathToFile)
+        _ = NSKeyedArchiver.archiveRootObject(trips, toFile: pathToFile)
     }
     
 

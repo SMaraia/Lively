@@ -14,10 +14,7 @@ class PhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        flowLayout?.itemSize = CGSize(width: self.view.frame.width / 3, height: self.view.frame.width / 3)
-        for image in trips.trips{
-            
-        }
+
         //photoCollection?.collectionViewLayout.
         // Do any additional setup after loading the view, typically from a nib.
     }

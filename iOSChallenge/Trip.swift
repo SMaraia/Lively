@@ -11,26 +11,22 @@ import UIKit
 
 class Trip: NSObject, NSCoding {
     var name: String
-    var tripPhotos: [UIImage]
-    var tripDescription: String
+    var moments: [Moment]
     
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(tripPhotos, forKey: "PHOTOS")
-        aCoder.encodeObject(name, forKey: "NAME")
-        aCoder.encodeObject(tripDescription, forKey: "DESC")
+        aCoder.encodeObject(moments, forKey: "TRIP_MOMENTS")
+        aCoder.encodeObject(name, forKey: "TRIP_NAME")
     }
     
     required init?(coder aDecoder: NSCoder) {
         self.name = aDecoder.decodeObjectForKey("NAME") as! String
-        self.tripPhotos = aDecoder.decodeObjectForKey("PHOTOS") as! [UIImage]
-        self.tripDescription = aDecoder.decodeObjectForKey("DESC") as! String
+        self.moments = aDecoder.decodeObjectForKey("PHOTOS") as! [Moment]
         super.init()
     }
     
     init(name: String) {
         self.name = name
-        self.tripPhotos = []
-        self.tripDescription = ""
+        self.moments = []
     }
 }
 

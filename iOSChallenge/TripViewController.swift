@@ -8,18 +8,17 @@
 
 import UIKit
 
-class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate {
-    @IBOutlet weak var TextView: UITextView!
-    @IBOutlet weak var TripImageOne: UIImageView!
+class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var TripName: UILabel!
+    
     
     var TripIndex: Int? {
         didSet{
-            self.configureView()
+            //self.configureView()
         }
     }
     
-    func configureView() {
+    /*func configureView() {
         if TextView != nil {
             if let index: Int = TripIndex {
                 TripName.text = trips[index].name
@@ -35,23 +34,29 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
                 }
             }
         }
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TextView.delegate = self
-
-        let photoTapped = UITapGestureRecognizer(target: self, action: "photosTapped:")
-        photoTapped.delegate = self
         
-        
-        
-        self.configureView()
     }
     
-    func textViewDidChange(textView: UITextView) {
-        trips[TripIndex!].tripDescription = TextView.text
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return trips[TripIndex!].moments.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("momentCell", forIndexPath: indexPath) as! TripCollectionViewCell
+        let moment = trips[TripIndex!].moments[indexPath.row]
+        // Configure the cell...
+        cell.momentImageView?.image = moment.image
+        cell.momentTextView?.text = moment.journalLog
+        
+        cell.momentTextView?.delegate = self
+        
+        return cell
+
     }
     
 

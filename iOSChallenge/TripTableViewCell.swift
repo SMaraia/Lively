@@ -11,4 +11,6 @@ import UIKit
 class TripTableViewCell: UITableViewCell {
     @IBOutlet var imageOne: UIImageView?
     @IBOutlet var imageTwo: UIImageView?
+    
+    
 }
