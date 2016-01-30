@@ -24,7 +24,7 @@ class TripTableViewController: UITableViewController {
             trips = NSKeyedUnarchiver.unarchiveObjectWithFile(FilePathInDocumentsDirectory(SAVED_FILE_NAME)) as! TripHolder
         }
         //sets the app up to save the favorites object when the app becomes inactive
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "saveData", name: UIApplicationWillResignActiveNotification, object: nil)
+        //NSNotificationCenter.defaultCenter().addObserver(self, selector: "saveData", name: UIApplicationWillResignActiveNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
