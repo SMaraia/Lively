@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Bd-Qt-6RE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Bd-Qt-6RE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="175"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NVB-gD-n2I" id="LL4-y0-KqF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="174.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="174"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sTk-IW-gxV" userLabel="tripImageOne">
@@ -37,7 +37,7 @@
                                             </variation>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tripName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pz3-1h-4FJ">
-                                            <rect key="frame" x="28" y="77" width="71" height="20.5"/>
+                                            <rect key="frame" x="28" y="77" width="71" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -99,7 +99,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TripName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICa-QH-SwP">
-                                <rect key="frame" x="36" y="97" width="74.5" height="21"/>
+                                <rect key="frame" x="36" y="97" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -110,6 +110,7 @@
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E1n-kj-wxZ">
                                 <rect key="frame" x="0.0" y="146" width="375" height="477"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="1" minimumInteritemSpacing="20" id="eBU-la-RRI">
                                     <size key="itemSize" width="350" height="470"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -118,31 +119,34 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="momentCell" id="vPa-pW-2ke" customClass="TripCollectionViewCell" customModule="iOSChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="3.5" width="350" height="470"/>
+                                        <rect key="frame" x="0.0" y="4" width="350" height="470"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="470"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mPn-Tk-Exh">
-                                                    <rect key="frame" x="8" y="0.0" width="334" height="245.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="334" height="246"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="mPn-Tk-Exh" secondAttribute="height" multiplier="1:1" id="Aap-uq-WGY"/>
                                                         <constraint firstAttribute="width" constant="75" id="GR6-YK-tDv"/>
                                                         <constraint firstAttribute="width" constant="375" id="H7X-DQ-Bm3"/>
                                                         <constraint firstAttribute="width" secondItem="mPn-Tk-Exh" secondAttribute="height" multiplier="15:11" id="gyC-mA-FOr"/>
                                                         <constraint firstAttribute="height" constant="245" id="joB-eg-wwe"/>
+                                                        <constraint firstAttribute="height" constant="246" id="o0O-l1-VEB"/>
                                                     </constraints>
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="Aap-uq-WGY"/>
                                                             <exclude reference="GR6-YK-tDv"/>
                                                             <exclude reference="H7X-DQ-Bm3"/>
+                                                            <exclude reference="gyC-mA-FOr"/>
+                                                            <exclude reference="joB-eg-wwe"/>
                                                         </mask>
                                                     </variation>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FHf-RY-Pkz">
-                                                    <rect key="frame" x="18" y="255" width="314" height="207"/>
+                                                    <rect key="frame" x="18" y="256" width="314" height="206"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -155,6 +159,8 @@
                                         <constraints>
                                             <constraint firstItem="mPn-Tk-Exh" firstAttribute="top" secondItem="vPa-pW-2ke" secondAttribute="top" id="5aJ-me-tdy"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="FHf-RY-Pkz" secondAttribute="bottom" id="91f-Tl-gvF"/>
+                                            <constraint firstItem="mPn-Tk-Exh" firstAttribute="centerX" secondItem="FHf-RY-Pkz" secondAttribute="centerX" id="HUY-eU-aza"/>
+                                            <constraint firstItem="mPn-Tk-Exh" firstAttribute="leading" secondItem="vPa-pW-2ke" secondAttribute="leadingMargin" id="HoO-Mg-W8c"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="FHf-RY-Pkz" secondAttribute="bottom" constant="-8" id="NEH-zM-hiE"/>
                                             <constraint firstItem="FHf-RY-Pkz" firstAttribute="top" secondItem="mPn-Tk-Exh" secondAttribute="bottom" constant="10" id="QmD-Ae-X0T"/>
                                             <constraint firstItem="mPn-Tk-Exh" firstAttribute="leading" secondItem="vPa-pW-2ke" secondAttribute="leading" id="RLl-w2-35x"/>
@@ -170,7 +176,9 @@
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="RLl-w2-35x"/>
+                                                <exclude reference="eTx-Vp-hBH"/>
                                                 <exclude reference="h2h-JI-pqO"/>
+                                                <exclude reference="vGX-6H-ZB9"/>
                                                 <exclude reference="NEH-zM-hiE"/>
                                                 <exclude reference="eOD-8k-je1"/>
                                                 <exclude reference="eZe-ir-rO9"/>

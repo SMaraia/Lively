@@ -98,10 +98,12 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     func beganEditingTextView(tripCollectionViewCell: TripCollectionViewCell) {
         let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: tripCollectionViewCell, action: "stopEditing")
         navigationItem.rightBarButtonItem = doneButton
+        momentCollectionView.scrollEnabled = false
     }
     
     func finishedEditingTextView(tripCollectionViewCell: TripCollectionViewCell) {
         navigationItem.rightBarButtonItem = addButton
+        momentCollectionView.scrollEnabled = true
     }
     
     func photosTapped(sender: UITapGestureRecognizer? = nil) {
