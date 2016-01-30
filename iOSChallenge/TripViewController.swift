@@ -11,9 +11,7 @@ import UIKit
 class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate {
     @IBOutlet weak var TextView: UITextView!
     @IBOutlet weak var TripImageOne: UIImageView!
-    @IBOutlet weak var TripImageTwo: UIImageView!
     @IBOutlet weak var TripName: UILabel!
-    @IBOutlet weak var PhotoView: UIView!
     
     var TripIndex: Int? {
         didSet{
@@ -35,12 +33,6 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
                 } else {
                     TripImageOne.tintColor = UIColor.blackColor()
                 }
-                
-                if trips[index].tripPhotos.count > 1 {
-                    TripImageTwo.image = trips[index].tripPhotos[1]
-                } else {
-                    TripImageTwo.tintColor = UIColor.blackColor()
-                }
             }
         }
     }
@@ -53,7 +45,7 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         let photoTapped = UITapGestureRecognizer(target: self, action: "photosTapped:")
         photoTapped.delegate = self
         
-        PhotoView.addGestureRecognizer(photoTapped)
+        
         
         self.configureView()
     }
