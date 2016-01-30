@@ -124,13 +124,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="470"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FHf-RY-Pkz">
-                                                    <rect key="frame" x="28" y="255.5" width="294" height="136.5"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mPn-Tk-Exh">
                                                     <rect key="frame" x="8" y="0.0" width="334" height="245.5"/>
                                                     <constraints>
@@ -148,6 +141,13 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FHf-RY-Pkz">
+                                                    <rect key="frame" x="18" y="255" width="314" height="207"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -162,9 +162,9 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="mPn-Tk-Exh" secondAttribute="trailing" id="eTx-Vp-hBH"/>
                                             <constraint firstItem="FHf-RY-Pkz" firstAttribute="top" secondItem="vPa-pW-2ke" secondAttribute="topMargin" id="eZe-ir-rO9"/>
                                             <constraint firstAttribute="trailing" secondItem="mPn-Tk-Exh" secondAttribute="trailing" id="h2h-JI-pqO"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="FHf-RY-Pkz" secondAttribute="trailing" constant="20" id="kiq-ms-JlB"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="FHf-RY-Pkz" secondAttribute="trailing" constant="10" id="kiq-ms-JlB"/>
                                             <constraint firstItem="mPn-Tk-Exh" firstAttribute="leading" secondItem="vPa-pW-2ke" secondAttribute="leadingMargin" id="vGX-6H-ZB9"/>
-                                            <constraint firstItem="FHf-RY-Pkz" firstAttribute="leading" secondItem="vPa-pW-2ke" secondAttribute="leadingMargin" constant="20" id="wey-AH-Ik8"/>
+                                            <constraint firstItem="FHf-RY-Pkz" firstAttribute="leading" secondItem="vPa-pW-2ke" secondAttribute="leadingMargin" constant="10" id="wey-AH-Ik8"/>
                                             <constraint firstItem="FHf-RY-Pkz" firstAttribute="top" secondItem="mPn-Tk-Exh" secondAttribute="bottom" constant="10" id="zjI-8B-zEj"/>
                                         </constraints>
                                         <variation key="default">

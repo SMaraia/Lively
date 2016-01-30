@@ -8,11 +8,13 @@
 
 import UIKit
 
-class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TripCollectionViewCellDelegate {
     @IBOutlet weak var TripName: UILabel!
     
     @IBOutlet weak var momentCollectionView: UICollectionView!
     
+    var addButton : UIBarButtonItem?
+
     var tripIndex: Int? {
         didSet{
             //self.configureView()
@@ -43,6 +45,7 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         imagePickerController.sourceType = .PhotoLibrary
         imagePickerController.allowsEditing = true
         
+        
         self.presentViewController(imagePickerController, animated: true, completion: nil)
 
         
@@ -52,7 +55,7 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         let newMoment = Moment(index: trips[tripIndex!].moments.count)
         newMoment.image = image
-        newMoment.journalLog = "Fill in your thoughts Here!"
+        newMoment.journalLog = ""
         trips[tripIndex!].moments.append(newMoment)
         self.dismissViewControllerAnimated(true, completion: nil)
         momentCollectionView.reloadData()
@@ -62,7 +65,8 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         super.viewDidLoad()
         momentCollectionView.delegate = self
         momentCollectionView.dataSource = self
-        }
+        addButton = navigationItem.rightBarButtonItem!
+    }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
@@ -80,6 +84,7 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         
         cell.momentTextView?.text = moment.journalLog
         
+        cell.delegate = self
         cell.momentTextView?.delegate = cell
         
         cell.momentIndex = indexPath.row
@@ -90,6 +95,15 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     }
     
 
+    func beganEditingTextView(tripCollectionViewCell: TripCollectionViewCell) {
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: tripCollectionViewCell, action: "stopEditing")
+        navigationItem.rightBarButtonItem = doneButton
+    }
+    
+    func finishedEditingTextView(tripCollectionViewCell: TripCollectionViewCell) {
+        navigationItem.rightBarButtonItem = addButton
+    }
+    
     func photosTapped(sender: UITapGestureRecognizer? = nil) {
         
     }
