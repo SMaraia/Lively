@@ -30,6 +30,10 @@ class TripCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
             (self.superview?.superview!.frame.size.height)! - 215 + 50)   //resize
     }
     
+    func textViewDidChange(textView: UITextView) {
+        textView.scrollRangeToVisible(NSRange(location: textView.text.characters.count - 1, length: 1))
+    }
+    
     func stopEditing()
     {
         self.momentTextView?.endEditing(true)
