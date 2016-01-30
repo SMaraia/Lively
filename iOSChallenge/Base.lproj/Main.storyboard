@@ -73,6 +73,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Lively" id="Ghw-Js-Meb">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="QjP-WN-zOu"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Phk-D2-wgq">
                             <connections>
                                 <action selector="AddTapped:" destination="1CJ-JW-hWy" id="N9v-re-SiJ"/>
@@ -221,6 +222,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Lively" id="Elx-kf-Pnn">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="J33-Qz-DtF"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Aqu-iS-ymt">
                             <connections>
                                 <action selector="addMoment:" destination="dea-T1-l8Z" id="BtO-Ay-RoN"/>
