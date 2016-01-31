@@ -117,27 +117,36 @@
                                     </button>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E1n-kj-wxZ">
                                         <rect key="frame" x="0.0" y="60" width="375" height="499"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="477" id="ceQ-1B-atg"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="1" minimumInteritemSpacing="20" id="eBU-la-RRI">
-                                            <size key="itemSize" width="350" height="470"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="0.0" id="eBU-la-RRI">
+                                            <size key="itemSize" width="325" height="470"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="momentCell" id="vPa-pW-2ke" customClass="TripCollectionViewCell" customModule="iOSChallenge" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="14.5" width="350" height="470"/>
+                                                <rect key="frame" x="0.0" y="14.5" width="325" height="470"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="470"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="470"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FHf-RY-Pkz">
+                                                            <rect key="frame" x="8" y="256" width="309" height="206"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mPn-Tk-Exh">
-                                                            <rect key="frame" x="8" y="0.0" width="334" height="246"/>
+                                                            <rect key="frame" x="8" y="0.0" width="309" height="246"/>
                                                             <constraints>
+                                                                <constraint firstAttribute="width" constant="309" id="2bD-o4-vcP"/>
                                                                 <constraint firstAttribute="width" secondItem="mPn-Tk-Exh" secondAttribute="height" multiplier="1:1" id="Aap-uq-WGY"/>
                                                                 <constraint firstAttribute="width" constant="75" id="GR6-YK-tDv"/>
                                                                 <constraint firstAttribute="width" constant="375" id="H7X-DQ-Bm3"/>
@@ -147,6 +156,7 @@
                                                             </constraints>
                                                             <variation key="default">
                                                                 <mask key="constraints">
+                                                                    <exclude reference="2bD-o4-vcP"/>
                                                                     <exclude reference="Aap-uq-WGY"/>
                                                                     <exclude reference="GR6-YK-tDv"/>
                                                                     <exclude reference="H7X-DQ-Bm3"/>
@@ -155,17 +165,10 @@
                                                                 </mask>
                                                             </variation>
                                                         </imageView>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FHf-RY-Pkz">
-                                                            <rect key="frame" x="18" y="256" width="314" height="206"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        </textView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="0.35230152027027029" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="mPn-Tk-Exh" firstAttribute="top" secondItem="vPa-pW-2ke" secondAttribute="top" id="5aJ-me-tdy"/>
                                                     <constraint firstAttribute="bottomMargin" secondItem="FHf-RY-Pkz" secondAttribute="bottom" id="91f-Tl-gvF"/>
@@ -174,17 +177,19 @@
                                                     <constraint firstAttribute="bottomMargin" secondItem="FHf-RY-Pkz" secondAttribute="bottom" constant="-8" id="NEH-zM-hiE"/>
                                                     <constraint firstItem="FHf-RY-Pkz" firstAttribute="top" secondItem="mPn-Tk-Exh" secondAttribute="bottom" constant="10" id="QmD-Ae-X0T"/>
                                                     <constraint firstItem="mPn-Tk-Exh" firstAttribute="leading" secondItem="vPa-pW-2ke" secondAttribute="leading" id="RLl-w2-35x"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="mPn-Tk-Exh" secondAttribute="trailing" id="bJ1-qk-O7n"/>
                                                     <constraint firstItem="FHf-RY-Pkz" firstAttribute="top" secondItem="mPn-Tk-Exh" secondAttribute="bottom" id="eOD-8k-je1"/>
                                                     <constraint firstAttribute="trailingMargin" secondItem="mPn-Tk-Exh" secondAttribute="trailing" id="eTx-Vp-hBH"/>
                                                     <constraint firstItem="FHf-RY-Pkz" firstAttribute="top" secondItem="vPa-pW-2ke" secondAttribute="topMargin" id="eZe-ir-rO9"/>
                                                     <constraint firstAttribute="trailing" secondItem="mPn-Tk-Exh" secondAttribute="trailing" id="h2h-JI-pqO"/>
-                                                    <constraint firstAttribute="trailingMargin" secondItem="FHf-RY-Pkz" secondAttribute="trailing" constant="10" id="kiq-ms-JlB"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="FHf-RY-Pkz" secondAttribute="trailing" id="kiq-ms-JlB"/>
                                                     <constraint firstItem="mPn-Tk-Exh" firstAttribute="leading" secondItem="vPa-pW-2ke" secondAttribute="leadingMargin" id="vGX-6H-ZB9"/>
-                                                    <constraint firstItem="FHf-RY-Pkz" firstAttribute="leading" secondItem="vPa-pW-2ke" secondAttribute="leadingMargin" constant="10" id="wey-AH-Ik8"/>
+                                                    <constraint firstItem="FHf-RY-Pkz" firstAttribute="leading" secondItem="vPa-pW-2ke" secondAttribute="leadingMargin" id="wey-AH-Ik8"/>
                                                     <constraint firstItem="FHf-RY-Pkz" firstAttribute="top" secondItem="mPn-Tk-Exh" secondAttribute="bottom" constant="10" id="zjI-8B-zEj"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
+                                                        <exclude reference="HUY-eU-aza"/>
                                                         <exclude reference="RLl-w2-35x"/>
                                                         <exclude reference="eTx-Vp-hBH"/>
                                                         <exclude reference="h2h-JI-pqO"/>

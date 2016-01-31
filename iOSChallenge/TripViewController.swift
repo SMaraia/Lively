@@ -102,6 +102,21 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("momentCell", forIndexPath: indexPath) as! TripCollectionViewCell
         let moment = trips[tripIndex!].moments[indexPath.row]
         // Configure the cell...
+        
+        /*if !UIAccessibilityIsReduceTransparencyEnabled() {
+            cell.backgroundColor = UIColor.clearColor()
+            
+            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            //always fill the view
+            blurEffectView.frame = cell.frame
+            blurEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+            self.view.insertSubview(blurEffectView, aboveSubview: cell)
+        } 
+        else {
+            cell.backgroundColor = UIColor.blackColor()
+        }*/
+        
         cell.momentImageView?.image = moment.image
         
         cell.momentTextView?.text = moment.journalLog
@@ -111,6 +126,7 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         
         cell.momentIndex = indexPath.row
         cell.tripIndex = tripIndex!
+        
         
         return cell
 
