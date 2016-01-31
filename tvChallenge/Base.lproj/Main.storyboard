@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15E27e" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15E27e" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="bge-b8-fV2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -8,13 +8,13 @@
         <!--Lively-->
         <scene sceneID="GGR-bg-Y01">
             <objects>
-                <tableViewController id="h8N-az-Uen" sceneMemberID="viewController">
+                <tableViewController id="h8N-az-Uen" customClass="TripTableViewController" customModule="tvChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="425" sectionHeaderHeight="40" sectionFooterHeight="40" id="Ph5-iA-g8T">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" id="Bjn-8E-gx8">
-                                <rect key="frame" x="0.0" y="199" width="1880" height="425"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripCell" id="Bjn-8E-gx8" customClass="TripTableViewCell" customModule="tvChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="199" width="1920" height="425"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bjn-8E-gx8" id="HYR-hm-ZXh">
                                     <rect key="frame" x="0.0" y="0.0" width="1904" height="425"/>
@@ -58,6 +58,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imageFour" destination="HoS-5g-bWu" id="dpN-Pn-uub"/>
+                                    <outlet property="imageOne" destination="pTu-T7-YHQ" id="fU1-9h-CbK"/>
+                                    <outlet property="imageThree" destination="Geq-S6-05z" id="sqt-Os-Z9J"/>
+                                    <outlet property="imageTwo" destination="JWc-oI-8FH" id="mLg-PD-zx2"/>
+                                    <outlet property="titleText" destination="xg0-MT-F2i" id="jfz-9I-UUB"/>
                                     <segue destination="Pdy-fv-fq3" kind="showDetail" identifier="ShowDetail" id="ZgT-x9-G3e"/>
                                 </connections>
                             </tableViewCell>

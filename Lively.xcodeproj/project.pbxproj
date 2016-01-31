@@ -12,6 +12,7 @@
 		C52BAC5D1C5C3D7800FAD67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52BAC5B1C5C3D7800FAD67F /* Main.storyboard */; };
 		C52BAC5F1C5C3D7800FAD67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52BAC5E1C5C3D7800FAD67F /* Assets.xcassets */; };
 		C52BAC6A1C5C3D7800FAD67F /* tvChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BAC691C5C3D7800FAD67F /* tvChallengeUITests.swift */; };
+		C57A642C1C5EA92900520CF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57A642B1C5EA92900520CF1 /* ViewController.swift */; };
 		C59B5D7A1C5AFA8D008CF5CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D791C5AFA8D008CF5CA /* AppDelegate.swift */; };
 		C59B5D7F1C5AFA8D008CF5CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59B5D7D1C5AFA8D008CF5CA /* Main.storyboard */; };
 		C59B5D811C5AFA8D008CF5CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59B5D801C5AFA8D008CF5CA /* Assets.xcassets */; };
@@ -21,9 +22,15 @@
 		C59B5D9F1C5B09E4008CF5CA /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D9E1C5B09E4008CF5CA /* TripTableViewCell.swift */; };
 		C59B5DA11C5B0E1D008CF5CA /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5DA01C5B0E1D008CF5CA /* PhotoViewController.swift */; };
 		C59B5DA51C5B12D7008CF5CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C59B5DA41C5B12D7008CF5CA /* LaunchScreen.xib */; };
+		C59E57891C5E7AF400724052 /* FileHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FEA88A1C5C0ED900C3138F /* FileHelperFunctions.swift */; };
+		C59E578A1C5E7AF400724052 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B5D9C1C5B06A9008CF5CA /* Trip.swift */; };
+		C59E578B1C5E7AF400724052 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E43D6F1C5D273E0041E330 /* Moment.swift */; };
+		C59E57911C5E7DA000724052 /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E57901C5E7DA000724052 /* TripViewController.swift */; };
+		C59E57951C5E91D000724052 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59E57941C5E91D000724052 /* CloudKit.framework */; };
+		C59E57971C5E91DC00724052 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59E57961C5E91DC00724052 /* CloudKit.framework */; };
 		C5E43D6E1C5D252E0041E330 /* TripCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E43D6D1C5D252E0041E330 /* TripCollectionViewCell.swift */; };
 		C5E43D701C5D273E0041E330 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E43D6F1C5D273E0041E330 /* Moment.swift */; };
-		C5E43D721C5E75030041E330 /* tvTripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E43D711C5E75030041E330 /* tvTripTableViewController.swift */; };
+		C5E43D721C5E75030041E330 /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E43D711C5E75030041E330 /* TripTableViewController.swift */; };
 		C5FEA8891C5BFF4E00C3138F /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FEA8881C5BFF4E00C3138F /* TripViewController.swift */; };
 		C5FEA88B1C5C0ED900C3138F /* FileHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FEA88A1C5C0ED900C3138F /* FileHelperFunctions.swift */; };
 		C5FEA88D1C5C210400C3138F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FEA88C1C5C210400C3138F /* MapKit.framework */; };
@@ -58,6 +65,7 @@
 		C52BAC691C5C3D7800FAD67F /* tvChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tvChallengeUITests.swift; sourceTree = "<group>"; };
 		C52BAC6B1C5C3D7800FAD67F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C52BAC721C5C3D8500FAD67F /* tvChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = tvChallenge.entitlements; sourceTree = "<group>"; };
+		C57A642B1C5EA92900520CF1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C59B5D761C5AFA8D008CF5CA /* Lively.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lively.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59B5D791C5AFA8D008CF5CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59B5D7E1C5AFA8D008CF5CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,9 +79,12 @@
 		C59B5D9E1C5B09E4008CF5CA /* TripTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		C59B5DA01C5B0E1D008CF5CA /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		C59B5DA41C5B12D7008CF5CA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../LaunchScreen.xib; sourceTree = "<group>"; };
+		C59E57901C5E7DA000724052 /* TripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripViewController.swift; path = tvChallenge/TVVC/TripViewController.swift; sourceTree = SOURCE_ROOT; };
+		C59E57941C5E91D000724052 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		C59E57961C5E91DC00724052 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.1.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		C5E43D6D1C5D252E0041E330 /* TripCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCollectionViewCell.swift; sourceTree = "<group>"; };
 		C5E43D6F1C5D273E0041E330 /* Moment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
-		C5E43D711C5E75030041E330 /* tvTripTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tvTripTableViewController.swift; sourceTree = "<group>"; };
+		C5E43D711C5E75030041E330 /* TripTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
 		C5FEA8881C5BFF4E00C3138F /* TripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		C5FEA88A1C5C0ED900C3138F /* FileHelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHelperFunctions.swift; sourceTree = "<group>"; };
 		C5FEA88C1C5C210400C3138F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -84,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59E57971C5E91DC00724052 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5FEA88D1C5C210400C3138F /* MapKit.framework in Frameworks */,
+				C59E57951C5E91D000724052 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				C52BAC591C5C3D7800FAD67F /* ViewController.swift */,
-				C5E43D711C5E75030041E330 /* tvTripTableViewController.swift */,
+				C57A642B1C5EA92900520CF1 /* ViewController.swift */,
+				C5E43D711C5E75030041E330 /* TripTableViewController.swift */,
+				C59E57901C5E7DA000724052 /* TripViewController.swift */,
 			);
 			name = TVVC;
 			path = ../iOSChallenge;
@@ -147,6 +162,8 @@
 		C59B5D6D1C5AFA8D008CF5CA = {
 			isa = PBXGroup;
 			children = (
+				C59E57961C5E91DC00724052 /* CloudKit.framework */,
+				C59E57941C5E91D000724052 /* CloudKit.framework */,
 				C59B5D9B1C5B0697008CF5CA /* Model */,
 				C5FEA88C1C5C210400C3138F /* MapKit.framework */,
 				C59B5D781C5AFA8D008CF5CA /* iOSChallenge */,
@@ -390,9 +407,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59E578A1C5E7AF400724052 /* Trip.swift in Sources */,
+				C59E57911C5E7DA000724052 /* TripViewController.swift in Sources */,
 				C52BAC5A1C5C3D7800FAD67F /* ViewController.swift in Sources */,
-				C5E43D721C5E75030041E330 /* tvTripTableViewController.swift in Sources */,
+				C59E57891C5E7AF400724052 /* FileHelperFunctions.swift in Sources */,
+				C5E43D721C5E75030041E330 /* TripTableViewController.swift in Sources */,
 				C52BAC581C5C3D7800FAD67F /* AppDelegate.swift in Sources */,
+				C57A642C1C5EA92900520CF1 /* ViewController.swift in Sources */,
+				C59E578B1C5E7AF400724052 /* Moment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +495,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tvChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.SeanMaraia.LivelyTV;
+				PRODUCT_BUNDLE_IDENTIFIER = me.SeanMaraia.LivelyiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = appletvos;
@@ -492,7 +514,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tvChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.SeanMaraia.LivelyTV;
+				PRODUCT_BUNDLE_IDENTIFIER = me.SeanMaraia.LivelyiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = appletvos;
