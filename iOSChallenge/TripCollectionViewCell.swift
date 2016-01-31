@@ -55,7 +55,7 @@ class TripCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         //keyboard will hide
         //TODO: - find way to replace -215 + 50 magic with the actual height of the keyboard
         self.delegate?.finishedEditingTextView(self)
-        let tripViewController = delegate as! TripViewController
+        //let tripViewController = delegate as! TripViewController
         /*self.superview?.superview!.frame = CGRectMake((self.superview?.superview!.frame.origin.x)!,
             (self.superview?.superview!.frame.origin.y)!,
             (self.superview?.superview!.frame.size.width)!,

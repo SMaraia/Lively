@@ -23,6 +23,8 @@ class TripTableViewController: UITableViewController {
         if(fileExists(FilePathInDocumentsDirectory(SAVED_FILE_NAME))){
             trips = NSKeyedUnarchiver.unarchiveObjectWithFile(FilePathInDocumentsDirectory(SAVED_FILE_NAME)) as! TripHolder
         }
+        
+        
         //sets the app up to save the favorites object when the app becomes inactive
         //NSNotificationCenter.defaultCenter().addObserver(self, selector: "saveData", name: UIApplicationWillResignActiveNotification, object: nil)
     }

@@ -20,6 +20,22 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     
     @IBOutlet weak var containingViewTopConstraint: NSLayoutConstraint!
     
+    @IBOutlet var locationButton: UIButton!
+    
+    @IBAction func addLocation(sender: AnyObject) {
+        let alertView = UIAlertController(title: "Name of Trip", message: "", preferredStyle: .Alert)
+        alertView.addTextFieldWithConfigurationHandler { (textField: UITextField) -> Void in
+            textField.placeholder = "Aruba"
+        }
+        let saveAction = UIAlertAction(title: "Done", style: .Default, handler: {alert -> Void in
+            let tripLoc = "@" + alertView.textFields![0].text!
+            self.locationButton.setTitle(tripLoc, forState: UIControlState.Normal)
+        })
+        alertView.addAction(saveAction)
+        self.presentViewController(alertView, animated: true, completion: nil)
+        
+    }
+
     var tripIndex: Int? {
         didSet{
             //self.configureView()
@@ -31,7 +47,7 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         imagePickerController.sourceType = .PhotoLibrary
-        imagePickerController.allowsEditing = true
+        imagePickerController.allowsEditing = false
         
         
         self.presentViewController(imagePickerController, animated: true, completion: nil)
@@ -88,6 +104,12 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWasShown:"), name:UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWasHidden:"), name:UIKeyboardWillHideNotification, object: nil);
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.Default
+        self.navigationController?.navigationBar.translucent = true
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
