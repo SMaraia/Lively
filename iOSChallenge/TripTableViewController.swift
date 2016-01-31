@@ -76,8 +76,10 @@ class TripTableViewController: UITableViewController {
         }
         let saveAction = UIAlertAction(title: "Done", style: .Default, handler: {alert -> Void in
             let tripName = alertView.textFields![0].text
-            let newTrip = Trip(name: tripName!)
-            self.addTrip(newTrip)
+            if(tripName != ""){
+                let newTrip = Trip(name: tripName!)
+                self.addTrip(newTrip)
+            }
         })
         alertView.addAction(saveAction)
         self.presentViewController(alertView, animated: true, completion: nil)

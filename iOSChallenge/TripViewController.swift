@@ -23,28 +23,28 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     @IBOutlet var locationButton: UIButton!
     
     @IBAction func addLocation(sender: AnyObject) {
-        let alertView = UIAlertController(title: "Name of Trip", message: "", preferredStyle: .Alert)
-        alertView.addTextFieldWithConfigurationHandler { (textField: UITextField) -> Void in
-            textField.placeholder = "Aruba"
-        }
-        let saveAction = UIAlertAction(title: "Done", style: .Default, handler: {alert -> Void in
-            let tripLoc = "@" + alertView.textFields![0].text!
-            if tripLoc != "@" {
-                self.locationButton.setTitle(tripLoc, forState: UIControlState.Normal)
-                
+        if !trips[self.tripIndex!].isLocationSet {
+            let alertView = UIAlertController(title: "Where are you?", message: "", preferredStyle: .Alert)
+            alertView.addTextFieldWithConfigurationHandler { (textField: UITextField) -> Void in
+                textField.placeholder = "Aruba"
             }
-            
-        })
-        alertView.addAction(saveAction)
-        self.presentViewController(alertView, animated: true, completion: nil)
+            let saveAction = UIAlertAction(title: "Done", style: .Default, handler: {alert -> Void in
+                let tripLoc = "@" + alertView.textFields![0].text!
+                if tripLoc != "@" {
+                    self.locationButton.setTitle(tripLoc, forState: UIControlState.Normal)
+                    //set the trips isLocationSet to true and get the current location
+                    trips[self.tripIndex!].location = tripLoc
+                    trips[self.tripIndex!].isLocationSet = true
+                }
+                
+            })
+            alertView.addAction(saveAction)
+            self.presentViewController(alertView, animated: true, completion: nil)
+        }
         
     }
 
-    var tripIndex: Int? {
-        didSet{
-            //self.configureView()
-        }
-    }
+    var tripIndex: Int?
     
     @IBAction func addMoment(sender: AnyObject) {
     
@@ -103,6 +103,9 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         addButton = navigationItem.rightBarButtonItem!
         if let index = tripIndex{
             TripName.text = trips[index].name
+            if trips[index].isLocationSet == true {
+                self.locationButton.setTitle(trips[index].location, forState: .Normal)
+            }
         }
         
         
