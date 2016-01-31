@@ -9,12 +9,15 @@
 import UIKit
 
 class PhotoViewController: UIViewController {
-    @IBOutlet weak var photoCollection: UICollectionView?
-    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout?
+    
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var imageSelected : UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imageView.image = imageSelected
         //photoCollection?.collectionViewLayout.
         // Do any additional setup after loading the view, typically from a nib.
     }
