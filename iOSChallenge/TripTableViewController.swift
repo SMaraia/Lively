@@ -45,11 +45,11 @@ class TripTableViewController: UITableViewController {
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> TripTableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("tripCell", forIndexPath: indexPath) as! TripTableViewCell
         let trip = trips[indexPath.row]
         // Configure the cell...
-        cell.textLabel?.text = trip.name
+        cell.titleText!.text = trip.name
         if trip.moments.count > 0 {
             cell.imageOne!.image = trip.moments[0].image
         } else {

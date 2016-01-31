@@ -26,23 +26,6 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         }
     }
     
-    /*func configureView() {
-        if TextView != nil {
-            if let index: Int = tripIndex {
-                TripName.text = trips[index].name
-                if trips[index].tripDescription != "" {
-                    TextView.text = trips[index].tripDescription
-                } else {
-                    TextView.text = "Fill in your Thoughts Here!"
-                }
-                if trips[index].tripPhotos.count > 0 {
-                    TripImageOne.image = trips[index].tripPhotos[0]
-                } else {
-                    TripImageOne.tintColor = UIColor.blackColor()
-                }
-            }
-        }
-    }*/
     @IBAction func addMoment(sender: AnyObject) {
     
         let imagePickerController = UIImagePickerController()
@@ -98,6 +81,10 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         momentCollectionView.delegate = self
         momentCollectionView.dataSource = self
         addButton = navigationItem.rightBarButtonItem!
+        if let index = tripIndex{
+            TripName.text = trips[index].name
+        }
+        
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWasShown:"), name:UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWasHidden:"), name:UIKeyboardWillHideNotification, object: nil);

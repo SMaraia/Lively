@@ -11,6 +11,6 @@ import UIKit
 class TripTableViewCell: UITableViewCell {
     @IBOutlet var imageOne: UIImageView?
     @IBOutlet var imageTwo: UIImageView?
-    
+    @IBOutlet var titleText: UILabel?
     
 }
