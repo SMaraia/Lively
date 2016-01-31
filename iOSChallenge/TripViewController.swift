@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TripCollectionViewCellDelegate {
+class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TripCollectionViewCellDelegate, CLLocationManagerDelegate {
     @IBOutlet weak var TripName: UILabel!
     
     @IBOutlet weak var momentCollectionView: UICollectionView!
@@ -35,12 +36,30 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
                     //set the trips isLocationSet to true and get the current location
                     trips[self.tripIndex!].location = tripLoc
                     trips[self.tripIndex!].isLocationSet = true
+                    
+                    
+                    //Setting the current location
+                    let loc = CLLocationManager()
+                    loc.desiredAccuracy = kCLLocationAccuracyBest
+                    loc.distanceFilter = kCLDistanceFilterNone
+                    loc.delegate = self
+                    loc.requestLocation()
+                    
                 }
                 
             })
             alertView.addAction(saveAction)
             self.presentViewController(alertView, animated: true, completion: nil)
         }
+        
+        
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        trips[self.tripIndex!].locData = locations[0]
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         
     }
 
@@ -115,8 +134,16 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.barStyle = UIBarStyle.Default
+        let navColor = UIColor(red: 255/255, green: 207/255, blue: 2/255, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = navColor
+        //self.navigationController?.navigationBar.barStyle = UIBarStyle.Default
         self.navigationController?.navigationBar.translucent = true
+        UIApplication.sharedApplication().statusBarHidden = false
+        
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return false
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -190,6 +217,14 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
                 (segue.destinationViewController as! PhotoViewController).imageSelected = trips[tripIndex!].moments[indexPath.row].image
             }
         }
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        var shouldReturn: Bool = true
+        if identifier == "locationButton" && !trips[self.tripIndex!].isLocationSet {
+            shouldReturn = false
+        }
+        return shouldReturn
     }
     
     override func didReceiveMemoryWarning() {

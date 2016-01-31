@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18CCADF41C5E8764008950F2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCADF31C5E8764008950F2 /* MapViewController.swift */; };
 		C52BAC581C5C3D7800FAD67F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BAC571C5C3D7800FAD67F /* AppDelegate.swift */; };
 		C52BAC5A1C5C3D7800FAD67F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BAC591C5C3D7800FAD67F /* ViewController.swift */; };
 		C52BAC5D1C5C3D7800FAD67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52BAC5B1C5C3D7800FAD67F /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18CCADF31C5E8764008950F2 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C52BAC4E1C5C3B4000FAD67F /* iOSChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iOSChallenge.entitlements; sourceTree = "<group>"; };
 		C52BAC551C5C3D7800FAD67F /* tvChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52BAC571C5C3D7800FAD67F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				C59B5D9E1C5B09E4008CF5CA /* TripTableViewCell.swift */,
 				C59B5DA01C5B0E1D008CF5CA /* PhotoViewController.swift */,
 				C5E43D6D1C5D252E0041E330 /* TripCollectionViewCell.swift */,
+				18CCADF31C5E8764008950F2 /* MapViewController.swift */,
 			);
 			name = PhoneVC;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				C5FEA88B1C5C0ED900C3138F /* FileHelperFunctions.swift in Sources */,
 				C59B5DA11C5B0E1D008CF5CA /* PhotoViewController.swift in Sources */,
 				C59B5D9F1C5B09E4008CF5CA /* TripTableViewCell.swift in Sources */,
+				18CCADF41C5E8764008950F2 /* MapViewController.swift in Sources */,
 				C59B5D9D1C5B06A9008CF5CA /* Trip.swift in Sources */,
 				C5FEA8891C5BFF4E00C3138F /* TripViewController.swift in Sources */,
 				C5E43D6E1C5D252E0041E330 /* TripCollectionViewCell.swift in Sources */,

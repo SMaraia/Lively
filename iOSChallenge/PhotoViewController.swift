@@ -22,8 +22,10 @@ class PhotoViewController: UIViewController {
         super.viewDidLoad()
         imageView.image = imageSelected
         //self.navigationController?.navigationBar.
-        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        //UINavigationBar.appearance().barTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()//UIColor(red: 0, green: 0, blue: 0, alpha: 0)
         self.navigationController?.navigationBar.translucent = false
+        
         //self.navigationController?.navigationBar.shadowImage = UIImage(
         //photoCollection?.collectionViewLayout.
         // Do any additional setup after loading the view, typically from a nib.
@@ -43,6 +45,10 @@ class PhotoViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 
 

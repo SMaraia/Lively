@@ -17,7 +17,8 @@ class TripTableViewController: UITableViewController {
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        let navColor = UIColor(red: 255/255, green: 207/255, blue: 2/255, alpha: 1)
+        UINavigationBar.appearance().barTintColor = navColor
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         if(fileExists(FilePathInDocumentsDirectory(SAVED_FILE_NAME))){
