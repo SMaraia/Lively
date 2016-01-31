@@ -29,7 +29,11 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         }
         let saveAction = UIAlertAction(title: "Done", style: .Default, handler: {alert -> Void in
             let tripLoc = "@" + alertView.textFields![0].text!
-            self.locationButton.setTitle(tripLoc, forState: UIControlState.Normal)
+            if tripLoc != "@" {
+                self.locationButton.setTitle(tripLoc, forState: UIControlState.Normal)
+                
+            }
+            
         })
         alertView.addAction(saveAction)
         self.presentViewController(alertView, animated: true, completion: nil)

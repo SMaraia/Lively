@@ -113,7 +113,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgZ-gs-nFw">
                                         <rect key="frame" x="288" y="15" width="67" height="30"/>
-                                        <state key="normal" title="@Location"/>
+                                        <state key="normal" title="@Add Location"/>
                                         <connections>
                                             <action selector="addLocation:" destination="dea-T1-l8Z" eventType="touchUpInside" id="23T-Uu-lCK"/>
                                         </connections>
@@ -146,7 +146,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
-                                                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mPn-Tk-Exh">
+                                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mPn-Tk-Exh">
                                                             <rect key="frame" x="8" y="0.0" width="309" height="246"/>
                                                             <gestureRecognizers/>
                                                             <constraints>

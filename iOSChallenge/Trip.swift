@@ -12,24 +12,28 @@ import UIKit
 class Trip: NSObject, NSCoding {
     var name: String
     var location: String
+    var isLocationSet: Bool
     var moments: [Moment]
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(moments, forKey: "TRIP_MOMENTS")
         aCoder.encodeObject(name, forKey: "TRIP_NAME")
         aCoder.encodeObject(location, forKey: "TRIP_LOCATION")
+        aCoder.encodeObject(isLocationSet, forKey: "IS_TRIP_SET")
     }
     
     required init?(coder aDecoder: NSCoder) {
         self.name = aDecoder.decodeObjectForKey("TRIP_NAME") as! String
         self.location = aDecoder.decodeObjectForKey("TRIP_LOCATION") as! String
         self.moments = aDecoder.decodeObjectForKey("TRIP_MOMENTS") as! [Moment]
+        self.isLocationSet = aDecoder.decodeObjectForKey("IS_TRIP_SET") as! Bool
         super.init()
     }
     
     init(name: String) {
         self.name = name
         self.location = "Add Location"
+        self.isLocationSet = false
         self.moments = []
     }
 }
