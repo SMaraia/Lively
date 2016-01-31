@@ -23,6 +23,7 @@
 		C59B5DA51C5B12D7008CF5CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C59B5DA41C5B12D7008CF5CA /* LaunchScreen.xib */; };
 		C5E43D6E1C5D252E0041E330 /* TripCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E43D6D1C5D252E0041E330 /* TripCollectionViewCell.swift */; };
 		C5E43D701C5D273E0041E330 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E43D6F1C5D273E0041E330 /* Moment.swift */; };
+		C5E43D721C5E75030041E330 /* tvTripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E43D711C5E75030041E330 /* tvTripTableViewController.swift */; };
 		C5FEA8891C5BFF4E00C3138F /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FEA8881C5BFF4E00C3138F /* TripViewController.swift */; };
 		C5FEA88B1C5C0ED900C3138F /* FileHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FEA88A1C5C0ED900C3138F /* FileHelperFunctions.swift */; };
 		C5FEA88D1C5C210400C3138F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FEA88C1C5C210400C3138F /* MapKit.framework */; };
@@ -72,6 +73,7 @@
 		C59B5DA41C5B12D7008CF5CA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../LaunchScreen.xib; sourceTree = "<group>"; };
 		C5E43D6D1C5D252E0041E330 /* TripCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCollectionViewCell.swift; sourceTree = "<group>"; };
 		C5E43D6F1C5D273E0041E330 /* Moment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
+		C5E43D711C5E75030041E330 /* tvTripTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tvTripTableViewController.swift; sourceTree = "<group>"; };
 		C5FEA8881C5BFF4E00C3138F /* TripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		C5FEA88A1C5C0ED900C3138F /* FileHelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHelperFunctions.swift; sourceTree = "<group>"; };
 		C5FEA88C1C5C210400C3138F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				C52BAC591C5C3D7800FAD67F /* ViewController.swift */,
+				C5E43D711C5E75030041E330 /* tvTripTableViewController.swift */,
 			);
 			name = TVVC;
 			path = ../iOSChallenge;
@@ -388,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C52BAC5A1C5C3D7800FAD67F /* ViewController.swift in Sources */,
+				C5E43D721C5E75030041E330 /* tvTripTableViewController.swift in Sources */,
 				C52BAC581C5C3D7800FAD67F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
