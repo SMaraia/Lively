@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Bd-Qt-6RE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Bd-Qt-6RE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -10,17 +10,17 @@
         <!--Lively-->
         <scene sceneID="zCl-Cd-f61">
             <objects>
-                <tableViewController id="1CJ-JW-hWy" customClass="TripTableViewController" customModule="iOSChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="1CJ-JW-hWy" customClass="TripTableViewController" customModule="Lively" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="175" sectionHeaderHeight="28" sectionFooterHeight="28" id="5V9-pa-tAl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripCell" rowHeight="175" id="NVB-gD-n2I" customClass="TripTableViewCell" customModule="iOSChallenge" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripCell" rowHeight="175" id="NVB-gD-n2I" customClass="TripTableViewCell" customModule="Lively" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="175"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NVB-gD-n2I" id="LL4-y0-KqF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="174.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="174"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tripName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pz3-1h-4FJ">
@@ -93,7 +93,7 @@
         <!--Lively-->
         <scene sceneID="nWh-2n-TCm">
             <objects>
-                <viewController id="dea-T1-l8Z" customClass="TripViewController" customModule="iOSChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dea-T1-l8Z" customClass="TripViewController" customModule="Lively" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qcr-rz-4s6"/>
                         <viewControllerLayoutGuide type="bottom" id="BSP-qY-rZD"/>
@@ -106,20 +106,21 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TripName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICa-QH-SwP">
-                                        <rect key="frame" x="20" y="20" width="74.5" height="20.5"/>
+                                        <rect key="frame" x="20" y="20" width="75" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgZ-gs-nFw">
-                                        <rect key="frame" x="251" y="15.5" width="104" height="30"/>
+                                        <rect key="frame" x="251" y="16" width="104" height="30"/>
                                         <state key="normal" title="@Add Location"/>
                                         <connections>
                                             <action selector="addLocation:" destination="dea-T1-l8Z" eventType="touchUpInside" id="23T-Uu-lCK"/>
+                                            <segue destination="dtW-eJ-3qy" kind="show" identifier="mapViewSegue" id="xPs-hf-xN6"/>
                                         </connections>
                                     </button>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E1n-kj-wxZ">
-                                        <rect key="frame" x="0.0" y="60" width="375" height="498.5"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E1n-kj-wxZ">
+                                        <rect key="frame" x="0.0" y="60" width="375" height="499"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="477" id="ceQ-1B-atg"/>
@@ -131,8 +132,8 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="momentCell" id="vPa-pW-2ke" customClass="TripCollectionViewCell" customModule="iOSChallenge" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="14.5" width="325" height="470"/>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="momentCell" id="vPa-pW-2ke" customClass="TripCollectionViewCell" customModule="Lively" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="15" width="325" height="470"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="325" height="470"/>
@@ -296,10 +297,43 @@
             </objects>
             <point key="canvasLocation" x="2057.5" y="-436.5"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="hsS-ZJ-bAB">
+            <objects>
+                <viewController id="dtW-eJ-3qy" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lde-TP-BPH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tcu-d8-7BG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4M7-yX-WBQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UOk-VP-b92">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tcu-d8-7BG" firstAttribute="top" secondItem="UOk-VP-b92" secondAttribute="bottom" id="EqN-xg-K5q"/>
+                            <constraint firstItem="UOk-VP-b92" firstAttribute="leading" secondItem="4M7-yX-WBQ" secondAttribute="leading" id="RlH-He-syV"/>
+                            <constraint firstItem="UOk-VP-b92" firstAttribute="top" secondItem="Lde-TP-BPH" secondAttribute="bottom" id="T98-nU-a9G"/>
+                            <constraint firstAttribute="trailing" secondItem="UOk-VP-b92" secondAttribute="trailing" id="lgu-7V-nta"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mapView" destination="UOk-VP-b92" id="tQC-AA-1va"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tit-t7-qZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057" y="397"/>
+        </scene>
         <!--Photo View Controller-->
         <scene sceneID="GEZ-C9-sDK">
             <objects>
-                <viewController id="9VQ-f7-nUq" customClass="PhotoViewController" customModule="iOSChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9VQ-f7-nUq" customClass="PhotoViewController" customModule="Lively" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c9K-QR-rg2"/>
                         <viewControllerLayoutGuide type="bottom" id="M2L-jc-T2y"/>
