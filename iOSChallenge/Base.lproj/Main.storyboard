@@ -271,9 +271,9 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="vUy-gz-fpd"/>
+                                        <exclude reference="B5j-YN-BTj"/>
                                         <exclude reference="xXP-jg-X1i"/>
                                         <exclude reference="FjL-Gm-MTC"/>
-                                        <exclude reference="B5j-YN-BTj"/>
                                         <exclude reference="ehn-zO-0yh"/>
                                         <exclude reference="phN-Py-8fE"/>
                                         <exclude reference="jv3-zO-g6T"/>
