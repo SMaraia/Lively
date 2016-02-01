@@ -63,7 +63,7 @@
                                     <outlet property="imageThree" destination="Geq-S6-05z" id="4P1-R4-e45"/>
                                     <outlet property="imageTwo" destination="pTu-T7-YHQ" id="9R1-b0-SbM"/>
                                     <outlet property="titleText" destination="xg0-MT-F2i" id="UiY-K1-BsE"/>
-                                    <segue destination="Pdy-fv-fq3" kind="showDetail" identifier="ShowDetail" id="ZgT-x9-G3e"/>
+                                    <segue destination="Pdy-fv-fq3" kind="show" identifier="ShowDetail" id="q9j-qM-ERc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -80,16 +80,16 @@
             </objects>
             <point key="canvasLocation" x="2515" y="56"/>
         </scene>
-        <!--View Controller-->
+        <!--Trip Table View Controller-->
         <scene sceneID="Iol-c8-MY2">
             <objects>
-                <viewController id="Pdy-fv-fq3" sceneMemberID="viewController">
+                <viewController id="Pdy-fv-fq3" customClass="TripTableViewController" customModule="tvChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LWM-dw-vkV"/>
                         <viewControllerLayoutGuide type="bottom" id="ZhG-f2-a0k"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tNE-jU-M4l">
-                        <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                 </viewController>

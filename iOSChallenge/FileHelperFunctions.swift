@@ -11,6 +11,7 @@ import UIKit
 import CloudKit
 
 let SAVED_FILE_NAME = "Trip"
+let SAVED_TRIPS_NAME = "Trips.archive"
 let SAVED_FILE_FILETYPE = ".archive"
 let cloudIdentifier:String! = "ZK6B9E922P.me.SeanMaraia.LivelyiOS"
 let privateDB = CKContainer.defaultContainer().privateCloudDatabase
@@ -36,18 +37,19 @@ func fileExists(path : String) -> Bool{
 // MARK: - Saving Data -
 func saveData() {
     //saves favorites object, including array of favorite Games, to documents folder
-    
+    let pathToTripsFile = FilePathInDocumentsDirectory("\(SAVED_TRIPS_NAME)")
+    _ = NSKeyedArchiver.archiveRootObject(trips, toFile: pathToTripsFile)
     
     //let tripRecord = CKRecord(recordType: "Trip", recordID: tripID)
     for trip: Trip in trips.trips{
         let tripID = CKRecordID(recordName: "\(SAVED_FILE_NAME)\(trip.name)")
-        let convertedTitle: String = trip.name.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        /*let convertedTitle: String = trip.name.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         let pathToFile = FilePathInDocumentsDirectory("\(SAVED_FILE_NAME)\(convertedTitle))\(SAVED_FILE_FILETYPE)")
-        _ = NSKeyedArchiver.archiveRootObject(trip, toFile: pathToFile)
+        _ = NSKeyedArchiver.archiveRootObject(trip, toFile: pathToFile)*/
 
         
         //let fileURL = NSURL(fileURLWithPath: pathToFile)
-        /*let tripConverted = CKRecord(recordType: "Trip", recordID: tripID)
+        let tripConverted = CKRecord(recordType: "Trip", recordID: tripID)
         tripConverted["title"] = trip.name
         tripConverted["location"] = trip.location
         var images : [CKAsset] = []
@@ -66,7 +68,7 @@ func saveData() {
                 print("Saving to Cloud Failed, Reason: \(error?.localizedDescription)")
             }
 
-        }*/
+        }
         
     }
 }
@@ -76,7 +78,7 @@ func getDataFromCloud(completionHandler: ( [Trip] -> Void) ) -> Void{
     let query = CKQuery(recordType: "Trip", predicate: NSPredicate(format: "TRUEPREDICATE"))
     DB.privateCloudDatabase.performQuery(query, inZoneWithID: nil, completionHandler: { resultsArray, error in
         if error != nil {
-            print("Getting From CLoud Failed, Reason: \(error?.localizedDescription)")
+            print("Getting From Cloud Failed, Reason: \(error?.localizedDescription)")
             return
         }
         for record in resultsArray!{

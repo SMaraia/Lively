@@ -33,8 +33,8 @@ class TripTableViewController: UITableViewController {
         
         
         
-        if(fileExists(FilePathInDocumentsDirectory(SAVED_FILE_NAME))){
-            trips = NSKeyedUnarchiver.unarchiveObjectWithFile(FilePathInDocumentsDirectory(SAVED_FILE_NAME)) as! TripHolder
+        if(fileExists(FilePathInDocumentsDirectory(SAVED_TRIPS_NAME))){
+            trips = NSKeyedUnarchiver.unarchiveObjectWithFile(FilePathInDocumentsDirectory(SAVED_TRIPS_NAME)) as! TripHolder
         } else {
             getDataFromCloud({ (tripArray : [Trip]) in
                 trips.trips = tripArray
