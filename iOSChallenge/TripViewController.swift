@@ -17,6 +17,9 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     var addButton : UIBarButtonItem?
 
     var keyboardSize: CGRect?
+    
+    let loc = CLLocationManager()
+    
     @IBOutlet weak var containingViewBottomConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var containingViewTopConstraint: NSLayoutConstraint!
@@ -35,15 +38,16 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
                     self.locationButton.setTitle(tripLoc, forState: UIControlState.Normal)
                     //set the trips isLocationSet to true and get the current location
                     trips[self.tripIndex!].location = tripLoc
-                    trips[self.tripIndex!].isLocationSet = true
+                    
                     
                     
                     //Setting the current location
-                    let loc = CLLocationManager()
-                    loc.desiredAccuracy = kCLLocationAccuracyBest
-                    loc.distanceFilter = kCLDistanceFilterNone
-                    loc.delegate = self
-                    loc.requestLocation()
+                    
+                    self.locationButton.enabled = false
+                    self.loc.desiredAccuracy = kCLLocationAccuracyBest
+                    self.loc.distanceFilter = kCLDistanceFilterNone
+                    self.loc.delegate = self
+                    self.loc.requestLocation()
                     
                 }
                 
@@ -57,6 +61,8 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         trips[self.tripIndex!].locData = locations[0]
+        trips[self.tripIndex!].isLocationSet = true
+        self.locationButton.enabled = true
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
@@ -126,7 +132,7 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
                 self.locationButton.setTitle(trips[index].location, forState: .Normal)
             }
         }
-        
+        self.loc.requestWhenInUseAuthorization()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWasShown:"), name:UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWasHidden:"), name:UIKeyboardWillHideNotification, object: nil);
@@ -216,6 +222,10 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
             if let indexPath = momentCollectionView.indexPathForCell(sender as! TripCollectionViewCell) {
                 (segue.destinationViewController as! PhotoViewController).imageSelected = trips[tripIndex!].moments[indexPath.row].image
             }
+        }
+        
+        if(segue.identifier == "mapViewSegue") {
+            (segue.destinationViewController as! MapViewController).tripIndex = tripIndex!
         }
     }
     

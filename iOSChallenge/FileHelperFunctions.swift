@@ -45,7 +45,7 @@ func saveData() {
         let pathToFile = FilePathInDocumentsDirectory("\(SAVED_FILE_NAME)\(convertedTitle))\(SAVED_FILE_FILETYPE)")
         _ = NSKeyedArchiver.archiveRootObject(trip, toFile: pathToFile)
         //let fileURL = NSURL(fileURLWithPath: pathToFile)
-        let tripConverted = CKRecord(recordType: "Trip", recordID: tripID)
+        /*let tripConverted = CKRecord(recordType: "Trip", recordID: tripID)
         tripConverted["title"] = trip.name
         tripConverted["location"] = trip.location
         var images : [CKAsset] = []
@@ -60,7 +60,7 @@ func saveData() {
         DB.privateCloudDatabase.saveRecord(tripConverted) { savedRecord, error in
             print("Saving to Cloud Failed, Reason: \(error?.localizedDescription)")
 
-        }
+        }*/
         
     }
 }
