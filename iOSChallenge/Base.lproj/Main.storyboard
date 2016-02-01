@@ -14,7 +14,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="175" sectionHeaderHeight="28" sectionFooterHeight="28" id="5V9-pa-tAl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.63921568630000003" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripCell" rowHeight="175" id="NVB-gD-n2I" customClass="TripTableViewCell" customModule="Lively" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="175"/>
@@ -38,7 +38,7 @@
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sTk-IW-gxV" userLabel="tripImageOne">
                                             <rect key="frame" x="272" y="50" width="75" height="75"/>
-                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="75" id="YXu-hA-gtl"/>
                                                 <constraint firstAttribute="width" constant="118" id="eJe-Ge-ZSC"/>
@@ -60,6 +60,7 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="sTk-IW-gxV" secondAttribute="trailing" constant="20" id="zzQ-Xl-rMZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5049035904255319" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="imageOne" destination="sTk-IW-gxV" id="3Ja-un-GEj"/>
                                     <outlet property="imageTwo" destination="TJ3-xp-jJw" id="eRx-Wo-Fvs"/>
@@ -121,25 +122,25 @@
                                     </button>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E1n-kj-wxZ">
                                         <rect key="frame" x="0.0" y="60" width="375" height="499"/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.63921568627450975" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="477" id="ceQ-1B-atg"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="0.0" id="eBU-la-RRI">
-                                            <size key="itemSize" width="325" height="470"/>
+                                            <size key="itemSize" width="350" height="470"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="momentCell" id="vPa-pW-2ke" customClass="TripCollectionViewCell" customModule="Lively" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="15" width="325" height="470"/>
+                                                <rect key="frame" x="0.0" y="15" width="350" height="470"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="470"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="470"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FHf-RY-Pkz">
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FHf-RY-Pkz">
                                                             <rect key="frame" x="8" y="256" width="309" height="206"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -147,7 +148,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
-                                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mPn-Tk-Exh">
+                                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPn-Tk-Exh">
                                                             <rect key="frame" x="8" y="0.0" width="309" height="246"/>
                                                             <gestureRecognizers/>
                                                             <constraints>
@@ -170,13 +171,13 @@
                                                                 </mask>
                                                             </variation>
                                                         </imageView>
-                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtM-Kv-CPU">
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtM-Kv-CPU">
                                                             <rect key="frame" x="8" y="0.0" width="309" height="246"/>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
-                                                <color key="backgroundColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="0.35230152027027029" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstItem="mPn-Tk-Exh" firstAttribute="top" secondItem="vPa-pW-2ke" secondAttribute="top" id="5aJ-me-tdy"/>
@@ -227,7 +228,7 @@
                                         </variation>
                                     </collectionView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.63921568627450975" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="E1n-kj-wxZ" firstAttribute="top" secondItem="ICa-QH-SwP" secondAttribute="bottom" constant="20" id="BcA-PV-wr1"/>
                                     <constraint firstItem="ICa-QH-SwP" firstAttribute="top" secondItem="E1n-kj-wxZ" secondAttribute="top" constant="20" id="FjL-Gm-MTC"/>

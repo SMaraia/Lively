@@ -28,6 +28,9 @@ class TripTableViewController: UITableViewController {
         //sets the app up to save the favorites object when the app becomes inactive
         //NSNotificationCenter.defaultCenter().addObserver(self, selector: "saveData", name: UIApplicationWillResignActiveNotification, object: nil)
     }
+    override func viewWillAppear(animated: Bool) {
+        self.tableView.reloadData()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -125,6 +128,7 @@ class TripTableViewController: UITableViewController {
     return true
     }
     */
+    
     
     
     // MARK: - Navigation

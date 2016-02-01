@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func customizeAppearance(){
-        let navColor = UIColor(red: 255/255, green: 207/255, blue: 2/255, alpha: 1)
+        let navColor = UIColor(red: 255/255, green: 185/255, blue: 2/255, alpha: 1)
         UINavigationBar.appearance().barTintColor = navColor
         //UINavigationBar.appearance().titleTextAttributes =
     }

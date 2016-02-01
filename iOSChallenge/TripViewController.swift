@@ -141,7 +141,7 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        let navColor = UIColor(red: 255/255, green: 207/255, blue: 2/255, alpha: 1)
+        let navColor = UIColor(red: 255/255, green: 185/255, blue: 2/255, alpha: 1)
         self.navigationController?.navigationBar.barTintColor = navColor
         //self.navigationController?.navigationBar.barStyle = UIBarStyle.Default
         self.navigationController?.navigationBar.translucent = true
