@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripCell" id="Bjn-8E-gx8" customClass="TripTableViewCell" customModule="tvChallenge" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="199" width="1880" height="425"/>
+                                <rect key="frame" x="0.0" y="199" width="1920" height="425"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bjn-8E-gx8" id="HYR-hm-ZXh">
                                     <rect key="frame" x="0.0" y="0.0" width="1904" height="425"/>
@@ -63,7 +63,7 @@
                                     <outlet property="imageThree" destination="Geq-S6-05z" id="4P1-R4-e45"/>
                                     <outlet property="imageTwo" destination="pTu-T7-YHQ" id="9R1-b0-SbM"/>
                                     <outlet property="titleText" destination="xg0-MT-F2i" id="UiY-K1-BsE"/>
-                                    <segue destination="Pdy-fv-fq3" kind="show" identifier="ShowDetail" id="q9j-qM-ERc"/>
+                                    <segue destination="Pdy-fv-fq3" kind="show" identifier="ShowDetail" id="Sgt-Ry-dal"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="2515" y="56"/>
         </scene>
-        <!--Trip Table View Controller-->
+        <!--Trip View Controller-->
         <scene sceneID="Iol-c8-MY2">
             <objects>
-                <viewController id="Pdy-fv-fq3" customClass="TripTableViewController" customModule="tvChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Pdy-fv-fq3" customClass="TripViewController" customModule="tvChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LWM-dw-vkV"/>
                         <viewControllerLayoutGuide type="bottom" id="ZhG-f2-a0k"/>
@@ -107,6 +107,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6FJ-FB-KJc">
+                        <rect key="frame" x="0.0" y="1036" width="1920" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="h8N-az-Uen" kind="relationship" relationship="rootViewController" id="qSR-1t-leP"/>
                     </connections>

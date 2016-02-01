@@ -63,6 +63,11 @@ func saveData() {
 
         tripConverted["images"] = images
         tripConverted["entires"] = entries
+        DB.privateCloudDatabase.deleteRecordWithID(tripID, completionHandler: {deletedRecord, error in
+            if(error != nil){
+                print("Couldn't delete Record, Reason: \(error?.localizedDescription)")
+            }
+        })
         DB.privateCloudDatabase.saveRecord(tripConverted) { savedRecord, error in
             if error != nil {
                 print("Saving to Cloud Failed, Reason: \(error?.localizedDescription)")
