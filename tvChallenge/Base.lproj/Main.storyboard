@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Lively-->
@@ -14,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripCell" id="Bjn-8E-gx8" customClass="TripTableViewCell" customModule="tvChallenge" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="199" width="1920" height="425"/>
+                                <rect key="frame" x="0.0" y="199" width="1880" height="425"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bjn-8E-gx8" id="HYR-hm-ZXh">
                                     <rect key="frame" x="0.0" y="0.0" width="1904" height="425"/>
@@ -63,7 +64,7 @@
                                     <outlet property="imageThree" destination="Geq-S6-05z" id="4P1-R4-e45"/>
                                     <outlet property="imageTwo" destination="pTu-T7-YHQ" id="9R1-b0-SbM"/>
                                     <outlet property="titleText" destination="xg0-MT-F2i" id="UiY-K1-BsE"/>
-                                    <segue destination="Pdy-fv-fq3" kind="show" identifier="ShowDetail" id="Sgt-Ry-dal"/>
+                                    <segue destination="Pdy-fv-fq3" kind="showDetail" identifier="ShowDetail" id="Sgt-Ry-dal"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -89,13 +90,66 @@
                         <viewControllerLayoutGuide type="bottom" id="ZhG-f2-a0k"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tNE-jU-M4l">
-                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vvK-KY-G6K">
+                                <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEj-98-wPD">
+                                <rect key="frame" x="503" y="53" width="281" height="109"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PgX-qg-2S8">
+                                    <rect key="frame" x="0.0" y="0.0" width="281" height="109"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <blurEffect style="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePb-EZ-Uo9">
+                                <rect key="frame" x="587" y="80" width="112" height="54"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="pLp-XG-Acq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ePb-EZ-Uo9" firstAttribute="top" secondItem="LWM-dw-vkV" secondAttribute="bottom" constant="80" id="NDt-L4-HsK"/>
+                            <constraint firstItem="IEj-98-wPD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tNE-jU-M4l" secondAttribute="leadingMargin" constant="50" id="Qq4-qh-mrL"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="IEj-98-wPD" secondAttribute="trailing" constant="50" id="SWD-yC-mBI"/>
+                            <constraint firstItem="IEj-98-wPD" firstAttribute="height" secondItem="ePb-EZ-Uo9" secondAttribute="height" multiplier="2" constant="1" id="Ulz-gW-ZRb"/>
+                            <constraint firstAttribute="trailing" secondItem="vvK-KY-G6K" secondAttribute="trailing" id="Uxb-fb-579"/>
+                            <constraint firstItem="IEj-98-wPD" firstAttribute="centerX" secondItem="ePb-EZ-Uo9" secondAttribute="centerX" id="Y3E-Ei-aw5"/>
+                            <constraint firstItem="IEj-98-wPD" firstAttribute="width" secondItem="ePb-EZ-Uo9" secondAttribute="width" multiplier="2.5" constant="1" id="Yic-Sp-Rve"/>
+                            <constraint firstItem="ePb-EZ-Uo9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tNE-jU-M4l" secondAttribute="leadingMargin" constant="50" id="Z6y-JH-npG"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="ePb-EZ-Uo9" secondAttribute="trailing" constant="50" id="cwo-Yy-v54"/>
+                            <constraint firstItem="ePb-EZ-Uo9" firstAttribute="centerX" secondItem="tNE-jU-M4l" secondAttribute="centerX" id="dsl-Vt-Sec"/>
+                            <constraint firstItem="IEj-98-wPD" firstAttribute="centerY" secondItem="ePb-EZ-Uo9" secondAttribute="centerY" id="kCA-FK-DUV"/>
+                            <constraint firstItem="ZhG-f2-a0k" firstAttribute="top" secondItem="vvK-KY-G6K" secondAttribute="bottom" id="omZ-H7-MG4"/>
+                            <constraint firstItem="vvK-KY-G6K" firstAttribute="top" secondItem="LWM-dw-vkV" secondAttribute="bottom" id="suu-6L-lIv"/>
+                            <constraint firstItem="vvK-KY-G6K" firstAttribute="leading" secondItem="tNE-jU-M4l" secondAttribute="leading" id="tiK-2f-1Jf"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="tripImage" destination="vvK-KY-G6K" id="5Go-Di-hzu"/>
+                        <outlet property="tripLabel" destination="ePb-EZ-Uo9" id="bYV-Kb-yr5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CF6-64-oXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4689.5" y="56"/>
+            <point key="canvasLocation" x="4669.5" y="56"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JZa-fW-854">
