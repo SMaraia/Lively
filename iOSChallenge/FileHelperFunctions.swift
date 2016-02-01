@@ -47,7 +47,7 @@ func saveData() {
 
         
         //let fileURL = NSURL(fileURLWithPath: pathToFile)
-        let tripConverted = CKRecord(recordType: "Trip", recordID: tripID)
+        /*let tripConverted = CKRecord(recordType: "Trip", recordID: tripID)
         tripConverted["title"] = trip.name
         tripConverted["location"] = trip.location
         var images : [CKAsset] = []
@@ -66,7 +66,7 @@ func saveData() {
                 print("Saving to Cloud Failed, Reason: \(error?.localizedDescription)")
             }
 
-        }
+        }*/
         
     }
 }

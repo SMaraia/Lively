@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>privacy - location usage description</key>
-	<string>I need Location</string>
+	<string>Lively would like access to your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>I need Location</string>
+	<string>Lively would like access to your location</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>I need Location</string>
+	<string>Lively would like access to your location</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

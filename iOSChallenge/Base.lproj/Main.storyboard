@@ -300,7 +300,7 @@
         <!--Map View Controller-->
         <scene sceneID="hsS-ZJ-bAB">
             <objects>
-                <viewController id="dtW-eJ-3qy" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController id="dtW-eJ-3qy" customClass="MapViewController" customModule="Lively" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lde-TP-BPH"/>
                         <viewControllerLayoutGuide type="bottom" id="Tcu-d8-7BG"/>
