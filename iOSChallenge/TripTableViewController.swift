@@ -11,8 +11,6 @@ import UIKit
 
 class TripTableViewController: UITableViewController {
     
-    var indicator : UIActivityIndicatorView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,29 +19,11 @@ class TripTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
-        
-        indicator.center = CGPointMake(UIScreen.mainScreen().bounds.width / 2, UIScreen.mainScreen().bounds.height / 2)
-        
-        indicator.hidesWhenStopped = true
-        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
-        view.addSubview(indicator)
-        indicator.startAnimating()
-        view.bringSubviewToFront(indicator)
-        
         
         
         if(fileExists(FilePathInDocumentsDirectory(SAVED_FILE_NAME))){
             trips = NSKeyedUnarchiver.unarchiveObjectWithFile(FilePathInDocumentsDirectory(SAVED_FILE_NAME)) as! TripHolder
-        } else {
-                    getDataFromCloud({ (tripArray : [Trip]) in
-                    trips.trips = tripArray
-                    self.indicator.stopAnimating()
-                    self.tableView.reloadData()
-                })
-            
         }
-        
         
         //sets the app up to save the favorites object when the app becomes inactive
         //NSNotificationCenter.defaultCenter().addObserver(self, selector: "saveData", name: UIApplicationWillResignActiveNotification, object: nil)

@@ -11,17 +11,37 @@ import UIKit
 
 class TripTableViewController: UITableViewController {
     
+    var indicator : UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+        
+        indicator.center = CGPointMake(UIScreen.mainScreen().bounds.width / 2, UIScreen.mainScreen().bounds.height / 2)
+        
+        indicator.hidesWhenStopped = true
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
+        view.addSubview(indicator)
+        indicator.startAnimating()
+        view.bringSubviewToFront(indicator)
+        
+        
+        
         if(fileExists(FilePathInDocumentsDirectory(SAVED_FILE_NAME))){
             trips = NSKeyedUnarchiver.unarchiveObjectWithFile(FilePathInDocumentsDirectory(SAVED_FILE_NAME)) as! TripHolder
+        } else {
+            getDataFromCloud({ (tripArray : [Trip]) in
+                trips.trips = tripArray
+                self.indicator.stopAnimating()
+                self.tableView.reloadData()
+            })
+            
         }
         
         
@@ -61,7 +81,19 @@ class TripTableViewController: UITableViewController {
         if trip.moments.count > 1 {
             cell.imageTwo!.image = trip.moments[1].image
         } else {
-            cell.imageOne!.alpha = 1.0
+            cell.imageTwo!.alpha = 1.0
+        }
+        
+        if trip.moments.count > 2 {
+            cell.imageThree!.image = trip.moments[2].image
+        } else {
+            cell.imageThree!.alpha = 1.0
+        }
+        
+        if trip.moments.count > 3 {
+            cell.imageFour!.image = trip.moments[3].image
+        } else {
+            cell.imageFour!.alpha = 1.0
         }
         
         
