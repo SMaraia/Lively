@@ -84,17 +84,6 @@ class TripTableViewController: UITableViewController {
             cell.imageTwo!.alpha = 1.0
         }
         
-        if trip.moments.count > 2 {
-            cell.imageThree!.image = trip.moments[2].image
-        } else {
-            cell.imageThree!.alpha = 1.0
-        }
-        
-        if trip.moments.count > 3 {
-            cell.imageFour!.image = trip.moments[3].image
-        } else {
-            cell.imageFour!.alpha = 1.0
-        }
         
         
         return cell
