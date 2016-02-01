@@ -11,6 +11,8 @@ import UIKit
 
 class TripTableViewController: UITableViewController {
     
+    var blurView: UIVisualEffectView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,7 +20,11 @@ class TripTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
+        let blurEffect = UIBlurEffect(style: .Light)
+        blurView = UIVisualEffectView(effect: blurEffect)
+        //blurView.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
+        view.addSubview(blurView)
+        view.sendSubviewToBack(blurView)
         
         
         if(fileExists(FilePathInDocumentsDirectory(SAVED_TRIPS_NAME))){
@@ -145,6 +151,9 @@ class TripTableViewController: UITableViewController {
     }
     
     
-    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        //super.scrollViewDidScroll(scrollView)
+        blurView.frame = scrollView.bounds
+    }
     
 }

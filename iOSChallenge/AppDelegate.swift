@@ -18,7 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         customizeAppearance()
-        
+        var img = UIImage(named: "background.png")
+        var imgView = UIImageView(image: img)
+        window?.addSubview(imgView)
+        window?.sendSubviewToBack(imgView)
         return true
     }
 
@@ -46,9 +49,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func customizeAppearance(){
-        let navColor = UIColor(red: 255/255, green: 185/255, blue: 2/255, alpha: 1)
+        let navColor = UIColor(red: 255/255, green: 207/255, blue: 2/255, alpha: 0.5)
         UINavigationBar.appearance().barTintColor = navColor
-        //UINavigationBar.appearance().titleTextAttributes =
+        UINavigationBar.appearance().tintColor = UIColor(red: 64/255, green: 33/255, blue: 93/255, alpha: 1)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 64/255, green: 33/255, blue: 93/255, alpha: 1)]
     }
 
 
