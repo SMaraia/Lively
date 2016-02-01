@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TripCollectionViewCellDelegate, CLLocationManagerDelegate {
+class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TripCollectionViewCellDelegate, CLLocationManagerDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var TripName: UILabel!
     
     @IBOutlet weak var momentCollectionView: UICollectionView!
@@ -141,9 +141,11 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        let navColor = UIColor(red: 255/255, green: 185/255, blue: 2/255, alpha: 1)
+        let navColor = UIColor(red: 255/255, green: 207/255, blue: 2/255, alpha: 0)
         self.navigationController?.navigationBar.barTintColor = navColor
         //self.navigationController?.navigationBar.barStyle = UIBarStyle.Default
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 64/255, green: 33/255, blue: 93/255, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 64/255, green: 33/255, blue: 93/255, alpha: 1)]
         self.navigationController?.navigationBar.translucent = true
         UIApplication.sharedApplication().statusBarHidden = false
         
@@ -241,5 +243,11 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let size = collectionView.bounds.size
+        //size.width -= 20
+        return size
     }
 }

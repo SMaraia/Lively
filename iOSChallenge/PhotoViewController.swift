@@ -24,6 +24,8 @@ class PhotoViewController: UIViewController {
         //self.navigationController?.navigationBar.
         //UINavigationBar.appearance().barTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()//UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 0, green: 0, blue: 255, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 0, green: 0, blue: 255, alpha: 1)]
         self.navigationController?.navigationBar.translucent = false
         
         //self.navigationController?.navigationBar.shadowImage = UIImage(
