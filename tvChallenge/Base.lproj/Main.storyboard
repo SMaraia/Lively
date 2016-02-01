@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripCell" id="Bjn-8E-gx8" customClass="TripTableViewCell" customModule="tvChallenge" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="199" width="1920" height="425"/>
+                                <rect key="frame" x="0.0" y="199" width="1880" height="425"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bjn-8E-gx8" id="HYR-hm-ZXh">
                                     <rect key="frame" x="0.0" y="0.0" width="1904" height="425"/>
@@ -58,11 +58,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageFour" destination="HoS-5g-bWu" id="dpN-Pn-uub"/>
-                                    <outlet property="imageOne" destination="pTu-T7-YHQ" id="fU1-9h-CbK"/>
-                                    <outlet property="imageThree" destination="Geq-S6-05z" id="sqt-Os-Z9J"/>
-                                    <outlet property="imageTwo" destination="JWc-oI-8FH" id="mLg-PD-zx2"/>
-                                    <outlet property="titleText" destination="xg0-MT-F2i" id="jfz-9I-UUB"/>
+                                    <outlet property="imageFour" destination="HoS-5g-bWu" id="PoU-rH-Qfi"/>
+                                    <outlet property="imageOne" destination="JWc-oI-8FH" id="LEY-rH-lNQ"/>
+                                    <outlet property="imageThree" destination="Geq-S6-05z" id="4P1-R4-e45"/>
+                                    <outlet property="imageTwo" destination="pTu-T7-YHQ" id="9R1-b0-SbM"/>
+                                    <outlet property="titleText" destination="xg0-MT-F2i" id="UiY-K1-BsE"/>
                                     <segue destination="Pdy-fv-fq3" kind="showDetail" identifier="ShowDetail" id="ZgT-x9-G3e"/>
                                 </connections>
                             </tableViewCell>

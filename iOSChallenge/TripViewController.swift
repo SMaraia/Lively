@@ -106,9 +106,10 @@ class TripViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
     
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let newMoment = Moment(index: trips[tripIndex!].moments.count)
-        newMoment.image = image
+        newMoment.image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
         newMoment.journalLog = ""
         trips[tripIndex!].moments.append(newMoment)
         self.dismissViewControllerAnimated(true, completion: nil)

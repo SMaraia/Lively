@@ -44,27 +44,71 @@ func saveData() {
         let convertedTitle: String = trip.name.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         let pathToFile = FilePathInDocumentsDirectory("\(SAVED_FILE_NAME)\(convertedTitle))\(SAVED_FILE_FILETYPE)")
         _ = NSKeyedArchiver.archiveRootObject(trip, toFile: pathToFile)
+
+        
         //let fileURL = NSURL(fileURLWithPath: pathToFile)
         let tripConverted = CKRecord(recordType: "Trip", recordID: tripID)
         tripConverted["title"] = trip.name
         tripConverted["location"] = trip.location
         var images : [CKAsset] = []
         var entries : [String] = []
-        for moment in trip.moments {
+        for (index, moment) in trip.moments.enumerate() {
+            let imageURL = NSURL(fileURLWithPath: (TempDirectory() as NSString).stringByAppendingPathComponent("\(trip.name)\(index)"))
+            UIImageJPEGRepresentation(moment.image, 1.0)!.writeToURL(imageURL, atomically: true)
             entries.append(moment.journalLog)
-            images.append(CKAsset(fileURL: moment.image))
+            images.append(CKAsset(fileURL: imageURL))
         }
 
         tripConverted["images"] = images
         tripConverted["entires"] = entries
         DB.privateCloudDatabase.saveRecord(tripConverted) { savedRecord, error in
-            print("Saving to Cloud Failed, Reason: \(error?.localizedDescription)")
+            if error != nil {
+                print("Saving to Cloud Failed, Reason: \(error?.localizedDescription)")
+            }
 
         }
         
     }
 }
 
-func getDataFromCloud() {
-    
+func getDataFromCloud(completionHandler: ( [Trip] -> Void) ) -> Void{
+    var tripArray : [Trip] = []
+    let query = CKQuery(recordType: "Trip", predicate: NSPredicate(format: "TRUEPREDICATE"))
+    DB.privateCloudDatabase.performQuery(query, inZoneWithID: nil, completionHandler: { resultsArray, error in
+        if error != nil {
+            print("Getting From CLoud Failed, Reason: \(error?.localizedDescription)")
+            return
+        }
+        for record in resultsArray!{
+            if record.allKeys().count > 0 {
+                let title = record["title"] as! String
+                let location = record["location"] as! String
+                var images : [UIImage] = []
+                for image in record["images"] as! [CKAsset]{
+                    let imageData :NSData = NSData(contentsOfURL: image.fileURL)!
+                    let finalImage = UIImage(data: imageData)
+                    images.append(finalImage!)
+                }
+                var entries : [String] = []
+                for entry in record["entires"] as! [String]{
+                    entries.append(entry)
+                }
+                let trip = Trip(name: title)
+                trip.location = location
+                var moments : [Moment] = []
+                for index in 0..<images.count {
+                    let moment = Moment(index: index)
+                    moment.image = images[index]
+                    moment.journalLog = entries[index]
+                    moments.append(moment)
+                }
+                trip.moments = moments
+                tripArray.append(trip)
+            }
+        }
+        dispatch_async(dispatch_get_main_queue(), {
+            completionHandler(tripArray)
+        })
+
+    })
 }
