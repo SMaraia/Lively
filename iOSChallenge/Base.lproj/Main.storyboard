@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Bd-Qt-6RE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10102" systemVersion="15E27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Bd-Qt-6RE">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10080"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="175"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NVB-gD-n2I" id="LL4-y0-KqF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="174"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="174.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tripName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pz3-1h-4FJ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tripName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pz3-1h-4FJ">
                                             <rect key="frame" x="28" y="77" width="71" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,6 +56,8 @@
                                         <constraint firstItem="TJ3-xp-jJw" firstAttribute="centerY" secondItem="LL4-y0-KqF" secondAttribute="centerY" id="MDA-Uu-xEg"/>
                                         <constraint firstItem="sTk-IW-gxV" firstAttribute="centerY" secondItem="LL4-y0-KqF" secondAttribute="centerY" id="RcR-N6-WLY"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="sTk-IW-gxV" secondAttribute="trailing" constant="20" id="fn9-cR-uF7"/>
+                                        <constraint firstItem="pz3-1h-4FJ" firstAttribute="leading" secondItem="LL4-y0-KqF" secondAttribute="leadingMargin" constant="20" id="oE3-U7-Qt5"/>
+                                        <constraint firstItem="pz3-1h-4FJ" firstAttribute="centerY" secondItem="LL4-y0-KqF" secondAttribute="centerY" id="rSM-df-QLi"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
